@@ -122,5 +122,5 @@ ax.axvline(x=0,linewidth=3, color="k")        # inc. width of y-axis and color i
 ax.axvline(x=-7,linewidth=3, color="k")        # inc. width of y-axis and color it red
 ax.legend(loc=3,fontsize=10)
 plt.tight_layout()
-plt.savefig('fig-SI-theta-sel.pdf')
+plt.savefig('fig-S8-theta-sel.pdf')
 
