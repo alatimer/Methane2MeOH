@@ -26,11 +26,11 @@ ptsize = 15 #size of markers
 conv_vec = np.logspace(-10,-.01,num=1e2,base=10)
 
 ### Import DFT Data #######
-dftobj = pickle.load(open('dftclasses_obj.pkl','rb'))
+dftobj = pickle.load(open('dftobj.pkl','rb'))
 dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 
 ##### Import Exp Data ######
-catlistobj = pickle.load(open('expclasses_obj.pkl','rb'))
+catlistobj = pickle.load(open('expobj.pkl','rb'))
 catlistobj = catlistobj.classfilter(lambda x: x.single_site =='yes')
 catlistobj = catlistobj.classfilter(lambda x: x.sel !=0)
 catlistobj = catlistobj.classfilter(lambda x: x.cat != 'Rh' )

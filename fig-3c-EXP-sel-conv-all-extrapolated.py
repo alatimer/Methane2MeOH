@@ -9,13 +9,13 @@ from selclass import selclass
 
 ### load DFT data ######3
 # For performance, can just use vibrations from Ni-BN since it is ~ average
-dftobj = pickle.load(open('dftclasses_obj.pkl','rb'))
+dftobj = pickle.load(open('dftobj.pkl','rb'))
 dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 dftobj = dftobj.filter(lambda x: x.cat=='Ni')
 dftobj = dftobj.filter(lambda x: x.cattype=='BN')
 
 ##### load exp data #########
-expclassesobj = pickle.load(open('expclasses_obj.pkl','rb'))
+expclassesobj = pickle.load(open('expobj.pkl','rb'))
 #remove exp data where no methanol observed
 expclassesobj = expclassesobj.classfilter(lambda x: x.sel!=0)
 #only include what are believed to be single-atom catalysts

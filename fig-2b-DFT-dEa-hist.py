@@ -65,4 +65,4 @@ plt.title(title)
 plt.tight_layout()
 plt.legend(fontsize=10)
 
-plt.savefig('fig-2b-dEa-hist.pdf')
+plt.savefig('fig-2b-DFT-dEa-hist.pdf')

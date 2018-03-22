@@ -14,7 +14,7 @@ verbose=True
 nbins=4
 normed=True
 
-catlistobj = pickle.load(open('expclasses_obj.pkl','rb'))
+catlistobj = pickle.load(open('expobj.pkl','rb'))
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=0)
 catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
 catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
@@ -26,7 +26,7 @@ catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
 #catlistobj = catlistobj.classfilter(lambda x: x.cat=='Cu')
 
 #for dGcorr
-dftclassesobj = pickle.load(open('dftclasses_obj.pkl','rb'))
+dftclassesobj = pickle.load(open('dftobj.pkl','rb'))
 dftclassesobj = dftclassesobj.filter(lambda x: x.vibs_ch4!=None)
 dftclassesobj = dftclassesobj.filter(lambda x: x.cat=='Ni')
 dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='BN')
