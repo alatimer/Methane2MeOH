@@ -33,8 +33,8 @@ cat_list = []
 expclasses_obj = expclasses(reader('exp.dat',cat_list))
 
 ### make pickle file
-pickle.dump( expclasses_obj, open( "expclasses_obj.pkl", "wb" ) )
-eco = pickle.load(open('expclasses_obj.pkl','rb'))
+pickle.dump( expclasses_obj, open( "expobj.pkl", "wb" ) )
+eco = pickle.load(open('expobj.pkl','rb'))
 
 for cat in eco.data:
     print cat.cat,cat.cattype
