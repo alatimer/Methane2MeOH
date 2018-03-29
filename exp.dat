@@ -322,3 +322,7 @@ MMO Fe  303 -1.057991947    36.36363636 Mountfort   aqueous O3  homogeneous yes 
 MMO Fe  303 -1.081159812    61.36986301 Mountfort   aqueous O4  homogeneous yes MMO
 MMO Fe  303 -1.03814763 15.38461538 Mountfort   aqueous O5  homogeneous yes MMO
 MMO Fe  303 -0.471433867    0   Mountfort   aqueous O6  homogeneous yes MMO
+ZSM-5   Rh  423 -2.397940009    71.4285714 Shan    aqueous O2/CO   heterogeneous   yes None
+ZSM-5   Rh  423 -2.301029996    71.09375   Shan    aqueous O2/CO   heterogeneous   yes None
+ZSM-5   Rh  423 -1.853871964    73.0639731 Shan    aqueous O2/CO   heterogeneous   yes None
+ZSM-5   Rh  423 -1.397940009    63.6934673 Shan    aqueous O2/CO   heterogeneous   yes None
