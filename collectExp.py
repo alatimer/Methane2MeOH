@@ -10,7 +10,9 @@ def reader(file_name,cat_list):
         else:
             if line.startswith('#'):
                 continue
+            print line
             vals = line.split()
+            DOI = vals[labels.index("DOI")]
             cat = vals[labels.index("cat")]
             cattype = vals[labels.index("cattype")]
             T = int(vals[labels.index("T")])
@@ -25,7 +27,8 @@ def reader(file_name,cat_list):
             if tag == None:
                 tag = ''
             cat_object=expclass(cat,cattype,T=T,log_conv=log_conv,sel=sel,author=author,rxntype=rxntype,
-                    oxidant=oxidant,catalysis=catalysis,single_site=single_site,tag=tag)
+                    oxidant=oxidant,catalysis=catalysis,single_site=single_site,tag=tag,DOI=DOI)
+            print cat_object.single_site
             cat_list.append(cat_object)
     return cat_list
 
