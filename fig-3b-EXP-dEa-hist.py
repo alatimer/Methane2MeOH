@@ -15,13 +15,17 @@ nbins=4
 normed=True
 
 catlistobj = pickle.load(open('expobj.pkl','rb'))
+#don't fit selectivites of 0 or 100 (rate), sigmoid is not well defined
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=0)
-catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
-catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
-#catlistobj = catlistobj.classfilter(lambda x: x.sel!=100)
-#catlistobj = catlistobj.classfilter(lambda x: x.cattype!='Zirconia')
-#catlistobj = catlistobj.classfilter(lambda x: x.rxntype=='gas')
+catlistobj = catlistobj.classfilter(lambda x: x.sel!=100)
 
+#Don't plot MMO enzyme points
+catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
+
+#Only plot data known to be single site catalysts
+catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
+
+#Can plot distributions for different active site types if desired
 #catlistobj = catlistobj.classfilter(lambda x: x.cat=='Fe')
 #catlistobj = catlistobj.classfilter(lambda x: x.cat=='Cu')
 

@@ -69,6 +69,7 @@ class expclass:
             oxidant='O2',
             catalysis='heterogeneous',
             single_site = 'no',
+            DOI = 'None', 
             tag=''):
         self.cat = cat
         self.cattype = cattype
@@ -82,6 +83,7 @@ class expclass:
         self.catalysis = catalysis
         self.single_site = single_site
         self.tag = tag
+        self.DOI = DOI
         self.dEa = None
 
         if self.author in self.shape_dict:
@@ -107,7 +109,13 @@ class expclass:
             dGa = exp_dEa + dftclasses_object.fun_dGcorr(T,P)
             diff = (sel_fun(X,dGa,T)*100-S)**2
             return diff
-        dEa = minimize(dEa_min_fun,dEa_guess,args = (self.T,self.sel,10**self.log_conv),bounds=[(0,1.2)]).x[0]
+        bounds =[(0.1,1.2)]
+        #For some reason, fit is tricky for this one point.  Need to 
+        #tighten the bounds to get correct fit.
+        if self.cattype == 'Zirconia':
+            bounds = [(0.2,1.2)]
+        dEa = minimize(dEa_min_fun,dEa_guess,args = (self.T,self.sel,10**self.log_conv),bounds=bounds).x[0]
+        #Add on a solvation correction to fitted dEa if reaction conditions are aqueous
         if self.rxntype =='aqueous':
             dEa+=solv_corr
         self.dEa = dEa

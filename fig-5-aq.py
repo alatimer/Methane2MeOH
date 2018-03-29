@@ -32,7 +32,6 @@ dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 ##### Import Exp Data ######
 catlistobj = pickle.load(open('expobj.pkl','rb'))
 catlistobj = catlistobj.classfilter(lambda x: x.single_site =='yes')
-catlistobj = catlistobj.classfilter(lambda x: x.sel !=0)
 catlistobj = catlistobj.classfilter(lambda x: x.rxntype =='aqueous')
 
 ###### Model Selectivity #######
