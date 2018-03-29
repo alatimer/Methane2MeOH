@@ -39,6 +39,8 @@ ch3oh_list = []
 classes_idx = set() 
 for cat in catlistobj.data:
     cattype = cat.cattype
+    if 'HSE' in cat.tag:
+        cattype=cattype+'-HSE'
     if cattype in classes_idx:
         label = '_nolegend_'
     else:
