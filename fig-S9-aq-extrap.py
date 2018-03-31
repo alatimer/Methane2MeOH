@@ -19,13 +19,13 @@ expclassesobj = pickle.load(open('expobj.pkl','rb'))
 #remove exp data where no methanol observed
 expclassesobj = expclassesobj.classfilter(lambda x: x.sel!=0)
 #only include what are believed to be single-atom catalysts
-expclassesobj = expclassesobj.classfilter(lambda x: x.single_site=='yes')
+expclassesobj = expclassesobj.classfilter(lambda x: x.rxntype=='aqueous')
 #exclude exp MMO, diffusion limited
 expclassesobj = expclassesobj.classfilter(lambda x: x.cattype!='MMO')
 
 solv_corr=0.22
 dEa_guess=0.55
-T_fix=700
+T_fix=323
 P = 101325
 dGcorr = dftobj.fun_dGcorr(T_fix,101325)
 err = 0.07
@@ -43,7 +43,7 @@ for cat in expclassesobj.data:
         label = None
     else:
         labels.append(label)
-    cat.get_dEa(dEa_guess,cat.T,dftobj,solv_corr=solv_corr)
+    cat.get_dEa(dEa_guess,cat.T,dftobj,solv_corr=0)
     #extrapolate selectivity
     modelsel = cat.sel_fun(T_fix,P,dftobj) #rethink, plots model
     #plot experimental data with extrapolated selectivity
@@ -53,15 +53,16 @@ for cat in expclassesobj.data:
             marker=cat.shape,
             label=label,
             fillstyle=cat.fill,
-            markersize=10,
+            markersize=15,
             clip_on=False)
 
 #### Plot Model selectivity ####
-conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
-selobj = selclass(conv_vec,dftobj,color='k')
-selobj.fun_err(ax,err,dEa_guess,T_fix,P)
+conv_vec = np.logspace(-8,-.01,num=1e2,base=10)
+selobj = selclass(conv_vec,dftobj,color='c')
+selobj.fun_err(ax,err,dEa_guess-solv_corr,T_fix,P)
 
 ax.legend(loc=3,fontsize=10)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')
-plt.savefig('fig-3c-EXP-sel-conv-all-extrapolated.pdf')
+ax.set_xlim([-8,0])
+plt.savefig('fig-S9-aq-extrap.pdf')
