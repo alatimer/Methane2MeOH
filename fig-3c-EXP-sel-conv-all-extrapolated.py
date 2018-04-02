@@ -12,7 +12,7 @@ from selclass import selclass
 dftobj = pickle.load(open('dftobj.pkl','rb'))
 dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 dftobj = dftobj.filter(lambda x: x.cat=='Ni')
-dftobj = dftobj.filter(lambda x: x.cattype=='BN')
+dftobj = dftobj.filter(lambda x: x.cattype=='Boronitride')
 
 ##### load exp data #########
 expclassesobj = pickle.load(open('expobj.pkl','rb'))

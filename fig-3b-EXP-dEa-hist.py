@@ -33,7 +33,7 @@ catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
 dftclassesobj = pickle.load(open('dftobj.pkl','rb'))
 dftclassesobj = dftclassesobj.filter(lambda x: x.vibs_ch4!=None)
 dftclassesobj = dftclassesobj.filter(lambda x: x.cat=='Ni')
-dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='BN')
+dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='Boronitride')
 clr_dict = {
 	'Fe':'firebrick',
 	'Cu':'goldenrod',
