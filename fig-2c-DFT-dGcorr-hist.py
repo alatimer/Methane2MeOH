@@ -22,6 +22,7 @@ dGcorr_dict={}
 for cat in dco.data:
     dGcorr = cat.get_dGcorr(T,P)
     dGcorr_list.append(dGcorr)
+    print cat.cat, cat.cattype
     if cat.cattype in dGcorr_dict.keys():
         dGcorr_dict[cat.cattype]['dGcorrs'].append(dGcorr)
     else:
