@@ -35,6 +35,11 @@ def reader(file_name,cat_list):
 cat_list = []
 expclasses_obj = expclasses(reader('exp.dat',cat_list))
 
+for obj in expclasses_obj.data:
+    if obj.cat == '-':
+       # print obj.cat
+        obj.cat = 'Gas-Phase(Radical)'
+
 ### make pickle file
 pickle.dump( expclasses_obj, open( "expobj.pkl", "wb" ) )
 eco = pickle.load(open('expobj.pkl','rb'))
