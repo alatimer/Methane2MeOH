@@ -64,18 +64,31 @@ class dftclass:
         self.ch_ch3oh = None
         
 
+        ''' 
         clrs_dict = {
-            #'Fe':'firebrick',
-            #'Cu':'goldenrod',
-            #'Cu-Fe':'firebrick',
-            #'Fe-MMO':'forestgreen',
-            #'V':'blue',
-            #'Mo':'m',
-            #'Ga':'green',
-            #'W':'orange',
-            #'Co':'cyan',
-            #'Ni':'pink',
-            #'Rh':'lightskyblue',
+            
+
+            'Mn':'lime',
+            'Cr':'lightblue',
+            'Tc':'salmon',
+            'Au':'gold',
+            'Pd':'darkviolet',
+            'Ag':'darkgray',
+            'Pt':'lavender',
+            'Ir':'navy',
+            'Ru':'darkcyan',
+            'Fe':'firebrick',
+            'Cu':'goldenrod',
+            'Cu-Fe':'firebrick',
+            'V':'blue',
+            'Mo':'m',
+            'Ga':'green',
+            'W':'orange',
+            'Co':'cyan',
+            'Ni':'pink',
+            'Rh':'lightskyblue',
+            'Au-Pd':'palegoldenrod',
+
             'rutile-110':'firebrick',
             'metal-111':'goldenrod',
             'GN':'pink',
@@ -104,10 +117,11 @@ class dftclass:
         else:
             self.shape = 'o'
 
-        if self.cattype in clrs_dict.keys():
-            self.color = clrs_dict[self.cattype]
-        else:
-            self.color = 'grey'
+        #if self.cat in clrs_dict.keys():
+           # self.color = clrs_dict[self.cat]
+        #else:
+        #    self.color = 'grey'
+        '''
 
         #def populate_atoms(self):
         if self.traj_ch4 !=None:
