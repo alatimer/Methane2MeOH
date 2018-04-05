@@ -9,14 +9,14 @@ import matplotlib.cm as cmx
 
 kB = 0.0000862 #eV*s
 dS = -0.002 #eV/K
-PCH4 = 1.0
+P0CH4 = 1.0
 dEa = 0.55
 logPCH3OH_real = -5
 
 dftobj = pickle.load(open('dftobj.pkl','rb'))
 dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 dftobj = dftobj.filter(lambda x: x.cat=='Ni')
-dftobj = dftobj.filter(lambda x: x.cattype=='BN')
+dftobj = dftobj.filter(lambda x: x.cattype=='Boronitride')
 
 def lim_PCH3OH(dE,dS,T,theta_lim):
     dG = dE - T*dS
@@ -56,7 +56,7 @@ for j,T in enumerate(T_vec):
         logPCH3OH_thresh = math.log10(lim_PCH3OH(dE,dS,T,theta_lim))
         logPCH3OH_thresh = max(logPCH3OH_thresh,-15) #needed for some weird math problems
         #print dE,T,logPCH3OH_thresh
-        conv = min(10**logPCH3OH_thresh,1) #assuming PCH4=1atm
+        conv = min(10**logPCH3OH_thresh/P0CH4,1) #assuming PCH4=1atm
         sel = sel_fun(conv,dGa,T)
         logP_grid[j][i]=logPCH3OH_thresh
         sel_grid[j][i] = max(0,min(sel,1))
