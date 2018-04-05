@@ -51,9 +51,9 @@ for cat in expclassesobj.data:
     ax.plot(cat.log_conv,
             modelsel,
             color=get_color(cat.cat),
-            marker=cat.shape,
+            marker='o',
             label=label,
-            fillstyle=cat.fill,
+            fillstyle='full',
             markersize=10,
             clip_on=False)
 

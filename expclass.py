@@ -17,6 +17,7 @@ class expclass:
     """
     """
     
+    '''
     shape_dict = {'Panov':'o',
             'Leshkov':'o',
             'Hutchings':'o',
@@ -54,7 +55,7 @@ class expclass:
             'Silicalite':'full',
             'x':'full',
             'oxide':'full',
-            }
+            }'''
     alpha_dict = {
             }
 
@@ -85,7 +86,7 @@ class expclass:
         self.tag = tag
         self.DOI = DOI
         self.dEa = None
-
+        '''
         if self.author in self.shape_dict:
             self.shape = self.shape_dict[self.author]
         else:
@@ -98,6 +99,7 @@ class expclass:
             self.fill = self.fill_dict[self.cattype]
         else:
             self.fill = 'full'
+        '''
         return
    
     def get_dEa(self,dEa_guess,T,dftclasses_object,solv_corr=0.22,P=101325):

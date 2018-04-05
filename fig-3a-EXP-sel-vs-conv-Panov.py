@@ -54,7 +54,7 @@ for pt in catlistobj.data:
         label = None
     else:
         labels.append(label)
-    ax.plot(pt.log_conv,pt.sel,'o',color=get_color(pt.cat),marker='o',label=label,fillstyle=pt.fill,markersize=ptsize,clip_on=False)
+    ax.plot(pt.log_conv,pt.sel,'o',color=get_color(pt.cat),marker='o',label=label,fillstyle='full',markersize=ptsize,clip_on=False)
     ax.text(pt.log_conv,pt.sel,str(pt.T),fontsize=7,ha='center',va='center',color='k')
 
 ###### PLOT PARAMETERS #####
