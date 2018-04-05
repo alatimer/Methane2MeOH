@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pickle
 from scipy.stats import norm
+from PointParameters import get_color
 
 #Load DFT object
 dco = pickle.load(open('dftobj.pkl','rb'))
@@ -28,7 +29,7 @@ for cat in dco.data:
     else:
         dGcorr_dict[cat.cattype] = {}
         dGcorr_dict[cat.cattype]['dGcorrs'] = [dGcorr]
-        dGcorr_dict[cat.cattype]['clr'] = cat.color
+        dGcorr_dict[cat.cattype]['clr'] = get_color(cat.cattype)
     #print cat.cat,'/',cat.cattype,'/',cat.vibs_ch4,'/',cat.vibs_ch3oh
  
 fig = plt.figure()

@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.mlab as mlab
 from scipy.stats import norm
 import pickle
+from PointParameters import get_color
 
 #Read in all DFT data (this work)
 dftobj = pickle.load(open('dftobj.pkl','rb'))
@@ -37,7 +38,8 @@ for mat in dftobj.data:
         else:
             dEa_dict[mclass] = {}
             dEa_dict[mclass]['dEas'] = [dEa]
-            dEa_dict[mclass]['clr'] = mat.color
+            dEa_dict[mclass]['clr'] = get_color(mat.cattype)
+            #dEa_dict[mclass]['clr'] = mat.color
         dEa_all.append(dEa)
         #print mat.cat,mat.cattype, mat.ets_ch4,mat.ets_ch3oh,dEa
 
@@ -61,8 +63,9 @@ plt.plot(x, p, 'k', linewidth=2)
 title = r"Fit results: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std)
 plt.ylabel(r'Counts')
 plt.xlabel(r'$E^a_{CH_4} - E^a_{CH_3OH}$ (eV)')
+plt.text(-0.1,-0.7,'(B)',fontsize=30)
 plt.title(title)
 plt.tight_layout()
-plt.legend(fontsize=10)
+plt.legend(fontsize=14,loc=2)
 
 plt.savefig('fig-2b-DFT-dEa-hist.pdf')

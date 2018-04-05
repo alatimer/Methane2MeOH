@@ -5,6 +5,7 @@ import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
+from PointParameters import get_color
 
 solv_corr=0.22
 dEa_guess=0.56
@@ -33,7 +34,7 @@ catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
 dftclassesobj = pickle.load(open('dftobj.pkl','rb'))
 dftclassesobj = dftclassesobj.filter(lambda x: x.vibs_ch4!=None)
 dftclassesobj = dftclassesobj.filter(lambda x: x.cat=='Ni')
-dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='Boronitride')
+dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='Boron-nitride')
 clr_dict = {
 	'Fe':'firebrick',
 	'Cu':'goldenrod',
@@ -72,10 +73,11 @@ for pt in catlistobj.data:
 for cat in dEa_dict:
     dEa_multi.append(np.array(dEa_dict[cat]))
     labels.append(cat)
-    if cat in expclass.clr_dict.keys():
-        colors.append(expclass.clr_dict[cat])
-    else:
-        colors.append('grey')
+    colors.append(get_color(cat))
+    #if cat in expclass.clr_dict.keys():
+    #    colors.append(expclass.clr_dict[cat])
+    #else:
+    #    colors.append('grey')
 n,bins,patches = plt.hist(dEa_multi,nbins,label=labels,color=colors,stacked=True,normed=normed)#kwargs
 plt.legend(fontsize=10)
 

@@ -16,7 +16,7 @@ logPCH3OH_real = -5
 dftobj = pickle.load(open('dftobj.pkl','rb'))
 dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 dftobj = dftobj.filter(lambda x: x.cat=='Ni')
-dftobj = dftobj.filter(lambda x: x.cattype=='Boronitride')
+dftobj = dftobj.filter(lambda x: x.cattype=='Boron-nitride')
 
 def lim_PCH3OH(dE,dS,T,theta_lim):
     dG = dE - T*dS

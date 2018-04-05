@@ -6,13 +6,14 @@ import math
 from ase.units import kB
 import numpy as np
 from selclass import selclass
+from PointParameters import get_color
 
 ### load DFT data ######3
 # For performance, can just use vibrations from Ni-BN since it is ~ average
 dftobj = pickle.load(open('dftobj.pkl','rb'))
 dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
 dftobj = dftobj.filter(lambda x: x.cat=='Ni')
-dftobj = dftobj.filter(lambda x: x.cattype=='Boronitride')
+dftobj = dftobj.filter(lambda x: x.cattype=='Boron-nitride')
 
 ##### load exp data #########
 expclassesobj = pickle.load(open('expobj.pkl','rb'))
@@ -49,7 +50,7 @@ for cat in expclassesobj.data:
     #plot experimental data with extrapolated selectivity
     ax.plot(cat.log_conv,
             modelsel,
-            color=cat.clr,
+            color=get_color(cat.cat),
             marker=cat.shape,
             label=label,
             fillstyle=cat.fill,

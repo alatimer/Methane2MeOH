@@ -30,7 +30,7 @@ def reader(file_name, dftclasses_obj):
 
 ########## RUTILE OXIDES #############
 
-RuO2 = dftclass('RuO2',
+RuO2 = dftclass('Ru',
     'rutile-110',
     traj_ch4='/home/alatimer/work_dir/meoh-vs-methane/RuO2/methane/neb/beef/qn.traj',
     traj_ch3oh='/home/alatimer/work_dir/meoh-vs-methane/RuO2/meoh/neb/beef/out.traj',
@@ -40,7 +40,7 @@ RuO2 = dftclass('RuO2',
 
     )
 
-IrO2 = dftclass('IrO2',
+IrO2 = dftclass('Ir',
     'rutile-110',
     traj_ch4='/home/alatimer/work_dir/meoh-vs-methane/IrO2/methane/neb/no-spin/out.traj',
     traj_ch3oh='/home/alatimer/work_dir/meoh-vs-methane/IrO2/meoh/neb/nospin/out.traj',
@@ -49,7 +49,7 @@ IrO2 = dftclass('IrO2',
     vibloc_ch4='/home/alatimer/work_dir/meoh-vs-methane/IrO2/methane/neb/vib',
     )
 
-PtO2 = dftclass('PtO2',
+PtO2 = dftclass('Pt',
     'rutile-110',
     traj_ch4='/home/alatimer/work_dir/meoh-vs-methane/PtO2/fixed-slab/methane/neb/beef/out.traj',
     traj_ch3oh='/scratch/users/alatimer/meoh-vs-methane/PtO2/fixed-slab/meoh/neb/beef/out.traj',
@@ -58,7 +58,7 @@ PtO2 = dftclass('PtO2',
     vibloc_ch3oh = '/home/alatimer/work_dir/meoh-vs-methane/PtO2/fixed-slab/meoh/neb/vib/',
     )
 
-RhO2 = dftclass('RhO2',
+RhO2 = dftclass('Rh',
     'rutile-110',
     traj_ch4='/home/alatimer/work_dir/meoh-vs-methane/RhO2/methane/qn.traj',
     traj_ch3oh='/home/alatimer/work_dir/meoh-vs-methane/RhO2/meoh/neb/beef/out.traj',
@@ -271,6 +271,18 @@ dftclasses_obj = dftclasses([
         ])
 
 reader('from-others.dat', dftclasses_obj)
+
+for cat in dftclasses_obj.data:
+    if cat.cattype == 'GN':
+        cat.cattype='Graphene'
+    if cat.cattype == 'BN':
+        cat.cattype='Boron-nitride'
+    if cat.cattype == 'metal-111':
+        cat.cattype='Metal(111)'
+    if cat.cattype == 'rutile-110':
+        cat.cattype='Rutile(110)'
+    if cat.cattype == 'porphyrin':
+        cat.cattype='Porphyrin'
 
 ### make pickle file
 pickle.dump( dftclasses_obj, open( "dftobj.pkl", "wb" ) )

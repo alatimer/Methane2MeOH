@@ -8,6 +8,7 @@ import pylab
 import math
 from scipy.stats import norm
 import pickle
+from PointParameters import get_color,get_shape
 
 def PCA_ellipse(xi,yi,ax,**ellipse_kwargs):
     xy = np.array(zip(xi-xi.mean(),yi-yi.mean()))
@@ -30,7 +31,6 @@ catlistobj = catlistobj.filter(lambda x: x.ets_ch4!=None)
 
 beef_fit = False
 ellipse_plot = True
-label = True
 surf_stab = False
 make_legend = True
 
@@ -38,34 +38,36 @@ ch4_list = []
 ch3oh_list = []
 classes_idx = set() 
 for cat in catlistobj.data:
-    cattype = cat.cattype
-    if 'HSE' in cat.tag:
-        cattype=cattype+'-HSE'
-    if cattype in classes_idx:
+    labeler = cat.cat
+    marker = get_shape(cat.cattype)
+    #cattype = cat.cattype
+    #if 'HSE' in cat.tag:
+    #    labeler+='-HSE'
+    if labeler in classes_idx:
         label = '_nolegend_'
     else:
-        label = cattype
-    classes_idx.add(cattype)
+        label = labeler
+    classes_idx.add(labeler)
 
     if 'surface-stabilized' in cat.tag:
         if surf_stab == False:
             continue
         clr = 'c'
     else:
-        clr = cat.color
+        clr = get_color(labeler)
         ch3oh_list.append(cat.ets_ch3oh)
         ch4_list.append(cat.ets_ch4)
     alpha = 1 ##???
-    ax.plot(cat.ets_ch3oh,cat.ets_ch4,marker=cat.shape,color=clr,alpha=alpha,label=label)
+    ax.plot(cat.ets_ch3oh,cat.ets_ch4,marker=marker,color=clr,alpha=alpha,label=label)
     ax.text(cat.ets_ch3oh,cat.ets_ch4,cat.cat,fontsize=3,ha='center',va='center')
     
 
     ###  BEEF ##
     if cat.beef_ch4 != None:
-        cattype = cat.cattype
         label='_nolegend_'
         ech4 = cat.beef_ets_ch4
         ech3oh = cat.beef_ets_ch3oh
+        clr = get_color(labeler)
         if beef_fit == True:
             for a,b in zip(ech4,ech3oh):
                 ch3oh_list.append(b)
@@ -73,10 +75,10 @@ for cat in catlistobj.data:
         #either plot ellipse or collection of entire beef ensemble
         if ellipse_plot==True:
             alpha= 0.5
-            PCA_ellipse(ech3oh,ech4,ax,alpha=alpha,color=cat.color)#,ec='k')
+            PCA_ellipse(ech3oh,ech4,ax,alpha=alpha,color=clr)#,ec='k')
         else:
             alpha = 0.05
-            ax.plot(ech3oh,ech4,'o',color=cat.color,marker=cat.shape,alpha=alpha,label=label)
+            ax.plot(ech3oh,ech4,'o',color=clr,marker=marker,alpha=alpha,label=label)
 
 
 ch4_list = np.array(ch4_list)
@@ -101,12 +103,13 @@ ax.set_xlabel(r'$E^a_{CH_3OH}$ (eV)')
 ax.set_ylabel(r'$E^a_{CH_4}$ (eV)')
 
 if make_legend == True:
-    plt.legend(loc=2,fontsize=7)
+    plt.legend(loc=2,fontsize=10,ncol=2)
 
 if ellipse_plot==True:
     ax.set_xlim(-0.75,1.75)
     ax.set_ylim(0,2.5)
-    ax.text(0.75,0.5,r'$\alpha=%4.2f$'%(m)+'\n'+r'$\beta=%4.2f$'%(b))
+    ax.text(0.5,0.4,r'$E^a_{CH_4}=%4.2fE^a_{CH_3OH}+%4.2f$'%(m,b)+'\n'+r'$MAE=%4.2f$'%(MAE))
+    plt.text(-1.1,-0.4,'(a)',fontsize=30)
 else:
     ax.text(0,-0.5,'m=%4.2f\nb=%4.2f'%(m,b))
 
