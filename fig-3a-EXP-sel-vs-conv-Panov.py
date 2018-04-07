@@ -20,7 +20,7 @@ P=101325
 size=(8,6)
 fig = plt.figure(1,figsize=size)
 ax = fig.add_subplot(111)
-ptsize = 15 #size of markers
+ptsize = 25 #size of markers
 
 ### Conversion Vector ###
 conv_vec = np.logspace(-10,-.01,num=1e2,base=10)
@@ -55,11 +55,12 @@ for pt in catlistobj.data:
     else:
         labels.append(label)
     ax.plot(pt.log_conv,pt.sel,'o',color=get_color(pt.cat),marker='o',label=label,fillstyle='full',markersize=ptsize,clip_on=False)
-    ax.text(pt.log_conv,pt.sel,str(pt.T),fontsize=7,ha='center',va='center',color='k')
+    ax.text(pt.log_conv,pt.sel,str(pt.T),fontsize=11,ha='center',va='center',color='k')
 
+plt.text(-5.6,-10,'(a)',fontsize=30)
 ###### PLOT PARAMETERS #####
-ax.set_xlim(-6,0)
-plt.legend(loc=3,fontsize=10)
+ax.set_xlim(-5,0)
+#plt.legend(loc=3,fontsize=10)
 ax.set_ylim(0,100)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')
