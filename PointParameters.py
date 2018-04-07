@@ -42,6 +42,9 @@ shape_dict = {
         'CHA-MO':'<',
         'CHA-MOH':'>',
         'MOR-MOM':'^',
+        'CHA-MOM':'v',
+        'SAPO-34-MO':'D',
+        'Porphyrin':'d',
 
 }
 
