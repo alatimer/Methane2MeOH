@@ -6,6 +6,7 @@ import matplotlib.mlab as mlab
 from scipy.stats import norm
 import pickle
 from PointParameters import get_color
+import pickle
 
 #Read in all DFT data (this work)
 dftobj = pickle.load(open('dftobj.pkl','rb'))
@@ -52,7 +53,12 @@ for mclass in dEa_dict:
     labels.append(mclass)
     colors.append(dEa_dict[mclass]['clr'])
     hatches.append('/')
-n,bins,patches = plt.hist(dEa_multi,nbins,normed=1,label=labels,color = colors,stacked=True)
+
+pickle.dump( dEa_all, open( "dEa_all.pkl", "wb" ) )
+pickle.dump( dEa_multi, open( "dEa_multi.pkl", "wb" ) )
+pickle.dump( colors, open( "dEa_clrs.pkl", "wb" ) )
+
+n,bins,patches = plt.hist(dEa_multi,nbins,normed=1,label=labels,color = colors,stacked=True,alpha=0.6)
 mu,std = norm.fit(dEa_all)
 plt.xlim(0,1)
 #  plt.ylim(0,8)
@@ -63,7 +69,7 @@ plt.plot(x, p, 'k', linewidth=2)
 title = r"Fit results: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std)
 plt.ylabel(r'Counts')
 plt.xlabel(r'$E^a_{CH_4} - E^a_{CH_3OH}$ (eV)')
-plt.text(-0.1,-0.7,'(B)',fontsize=30)
+plt.text(-0.1,-0.7,'(b)',fontsize=30)
 plt.title(title)
 plt.tight_layout()
 plt.legend(fontsize=14,loc=2)
