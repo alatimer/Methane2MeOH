@@ -9,6 +9,7 @@ import math
 from scipy.stats import norm
 import pickle
 from PointParameters import get_color,get_shape
+import copy
 
 def PCA_ellipse(xi,yi,ax,**ellipse_kwargs):
     xy = np.array(zip(xi-xi.mean(),yi-yi.mean()))
@@ -37,6 +38,8 @@ make_legend = True
 ch4_list = []
 ch3oh_list = []
 classes_idx = set() 
+shape_handles=[]
+clr_handles=[]
 for cat in catlistobj.data:
     labeler = cat.cat
     marker = get_shape(cat.cattype)
@@ -58,8 +61,10 @@ for cat in catlistobj.data:
         ch3oh_list.append(cat.ets_ch3oh)
         ch4_list.append(cat.ets_ch4)
     alpha = 1 ##???
-    ax.plot(cat.ets_ch3oh,cat.ets_ch4,marker=marker,color=clr,alpha=alpha,label=label)
-    ax.text(cat.ets_ch3oh,cat.ets_ch4,cat.cat,fontsize=3,ha='center',va='center')
+    h, = ax.plot(cat.ets_ch3oh,cat.ets_ch4,marker=marker,color=clr,alpha=alpha,label=label)
+    clr_handles.append(copy.copy(h))
+    shape_handles.append(copy.copy(h))
+    #ax.text(cat.ets_ch3oh,cat.ets_ch4,cat.cat,fontsize=3,ha='center',va='center')
     
 
     ###  BEEF ##
@@ -102,8 +107,15 @@ ax.plot(x_array,x_array*m+(b-mu_std),'--',color='k',zorder=1)
 ax.set_xlabel(r'$E^a_{CH_3OH}$ (eV)')
 ax.set_ylabel(r'$E^a_{CH_4}$ (eV)')
 
+#for h in shape_handles:
+#    h.set_color('k')
+
+#for h in clr_handles:
+#    h.set_marker('o')
+
 if make_legend == True:
-    plt.legend(loc=2,fontsize=10,ncol=2)
+    #plt.legend(loc=3,fontsize=10,ncol=2,handles=shape_handles)
+    plt.legend(loc=2,fontsize=10,ncol=2,handles=clr_handles)
 
 if ellipse_plot==True:
     ax.set_xlim(-0.75,1.75)
