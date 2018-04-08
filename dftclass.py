@@ -209,29 +209,77 @@ class dftclass:
             self.vibs_ch4g = vibs_reader(self.vibloc_ch4g)
             self.vibs_ch3ohg = vibs_reader(self.vibloc_ch3ohg)
 
+    def get_ads_Gcorr(self,vibs,verbose=False):
+        gibbs = HarmonicThermo(vib_energies = vibs, potentialenergy = 0)
+        return gibbs
+
+    def get_gas_Gcorr(self,atoms,vibs,symmetrynumber,spin,geometry,verbose=False):
+        gibbs = IdealGasThermo(vib_energies=vibs,
+                            potentialenergy=0,
+                            atoms=atoms,
+                            geometry=geometry,
+                            symmetrynumber=symmetrynumber,
+                            spin=spin,
+                            )
+        return gibbs
+
     def get_dGcorr(self,T,P,verbose=False):
-        def get_ads_Gcorr(vibs,T,verbose=False):
-            gibbs = HarmonicThermo(vib_energies = vibs, potentialenergy = 0)
-            adsGcorr = gibbs.get_helmholtz_energy(T,verbose=False)
-            return adsGcorr
-        def get_gas_Gcorr(atoms,vibs,T,P,symmetrynumber,spin,geometry,verbose=False):
-            gibbs = IdealGasThermo(vib_energies=vibs,
-                                potentialenergy=0,
-                                atoms=atoms,
-                                geometry=geometry,
-                                symmetrynumber=symmetrynumber,
-                                spin=spin,
-                                )
-            gasGcorr = gibbs.get_gibbs_energy(T,P,verbose=False)
-            return gasGcorr
-        Gcorr_ch4 = get_ads_Gcorr(self.vibs_ch4,T)                
-        Gcorr_ch3oh = get_ads_Gcorr(self.vibs_ch3oh,T)                
-        Gcorr_ch4g = get_gas_Gcorr(self.atoms_ch4g,self.vibs_ch4g,T,P,12,0,'nonlinear')                
-        Gcorr_ch3ohg = get_gas_Gcorr(self.atoms_ch3ohg,self.vibs_ch3ohg,T,P,1,0,'nonlinear')
-       # print Gcorr_ch4, Gcorr_ch3oh,Gcorr_ch4g,Gcorr_ch3ohg
-       # print 'ch4',(Gcorr_ch4 - Gcorr_ch4g),'ch3oh',(Gcorr_ch3oh - Gcorr_ch3ohg)
+        #will not depend on P, both gases are treated ideally
+        gibbs = self.get_ads_Gcorr(self.vibs_ch4) 
+        Gcorr_ch4 = gibbs.get_helmholtz_energy(T,verbose=False)
+        gibbs = self.get_ads_Gcorr(self.vibs_ch3oh) 
+        Gcorr_ch3oh = gibbs.get_helmholtz_energy(T,verbose=False)
+
+        gibbs = self.get_gas_Gcorr(self.atoms_ch4g,self.vibs_ch4g,12,0,'nonlinear')                
+        Gcorr_ch4g = gibbs.get_gibbs_energy(T,P,verbose=False)
+        gibbs = self.get_gas_Gcorr(self.atoms_ch3ohg,self.vibs_ch3ohg,1,0,'nonlinear')
+        Gcorr_ch3ohg = gibbs.get_gibbs_energy(T,P,verbose=False)
+        
         Gcorr =  (Gcorr_ch4 - Gcorr_ch4g) - (Gcorr_ch3oh - Gcorr_ch3ohg)         
         return Gcorr
+    
+    def get_dZPE(self):
+        gibbs = self.get_ads_Gcorr(self.vibs_ch4) 
+        ZPE_ch4 = gibbs.get_ZPE_correction()
+        gibbs = self.get_ads_Gcorr(self.vibs_ch3oh) 
+        ZPE_ch3oh = gibbs.get_ZPE_correction()
+
+        gibbs = self.get_gas_Gcorr(self.atoms_ch4g,self.vibs_ch4g,12,0,'nonlinear')                
+        ZPE_ch4g = gibbs.get_ZPE_correction()
+        gibbs = self.get_gas_Gcorr(self.atoms_ch3ohg,self.vibs_ch3ohg,1,0,'nonlinear')
+        ZPE_ch3ohg = gibbs.get_ZPE_correction()
+        
+        dZPE =  (ZPE_ch4 - ZPE_ch4g) - (ZPE_ch3oh - ZPE_ch3ohg)
+        return dZPE    
+
+    def get_dS(self,T,verbose=False):
+        P=101325
+        gibbs = self.get_ads_Gcorr(self.vibs_ch4) 
+        S_ch4 = gibbs.get_entropy(T,verbose)
+        gibbs = self.get_ads_Gcorr(self.vibs_ch3oh) 
+        S_ch3oh = gibbs.get_entropy(T,verbose)
+        
+        gibbs = self.get_gas_Gcorr(self.atoms_ch4g,self.vibs_ch4g,12,0,'nonlinear')                
+        S_ch4g = gibbs.get_entropy(T,P,verbose)
+        gibbs = self.get_gas_Gcorr(self.atoms_ch3ohg,self.vibs_ch3ohg,1,0,'nonlinear')
+        S_ch3ohg = gibbs.get_entropy(T,P,verbose)
+        dS =  (S_ch4 - S_ch4g) - (S_ch3oh - S_ch3ohg)
+        return dS 
+
+    def get_dC(self,T,verbose=False):
+        P=101325
+        gibbs = self.get_ads_Gcorr(self.vibs_ch4) 
+        Cv_ch4 = gibbs._vibrational_energy_contribution(T)
+        gibbs = self.get_ads_Gcorr(self.vibs_ch3oh) 
+        Cv_ch3oh = gibbs._vibrational_energy_contribution(T)
+        
+        gibbs = self.get_gas_Gcorr(self.atoms_ch4g,self.vibs_ch4g,12,0,'nonlinear')                
+        Cv_ch4g = gibbs._vibrational_energy_contribution(T)
+        gibbs = self.get_gas_Gcorr(self.atoms_ch3ohg,self.vibs_ch3ohg,1,0,'nonlinear')
+        Cv_ch3ohg = gibbs._vibrational_energy_contribution(T)
+        dCv =  (Cv_ch4 - Cv_ch4g) - (Cv_ch3oh - Cv_ch3ohg)
+        return dCv 
+    
 
 class dftclasses:
     """
