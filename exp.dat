@@ -1,302 +1,302 @@
-DOI cattype cat T   log_conv    sel author  rxntype oxidant catalysis   single-site tag
-10.1016/j.jcat.2004.04.010  MFI Fe  673 -0.21   2   Wood    gas N2O heterogeneous   yes None
-US4918249   sodalite    Fe  670 -1.42   59  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  675 -1.37   63  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  680 -1.34   64  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  686 -1.26   66  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  687 -1.28   70  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  689 -1.24   70  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  691 -1.27   68  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  695 -1.27   65  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  700 -1.29   66  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  705 -1.26   63  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  715 -1.21   64  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  725 -1.25   59  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  735 -1.24   58  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  692 -1.35   59  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  698 -1.27   63  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  703 -1.24   62  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  713 -1.28   59  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  703 -1.4    52  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  711 -1.34   55  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  717 -1.31   54  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  710 -1.62   43  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  722 -1.51   45  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  724 -1.46   46  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  728 -1.43   45  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  732 -1.41   44  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  726 -1.8    38  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  739 -1.59   40  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  701 -1.24   24  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  707 -1.24   25  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  712 -1.25   21  Durante gas O2  heterogeneous   yes None
-US4918249   SiO2    Fe  712 -1.64   25  Durante gas O2  heterogeneous   no  None
-US4918249   ZSM-5   Fe  709 -1.29   18  Durante gas O2  heterogeneous   yes None
-US4918249   sodalite    Fe  708 -1.24   25  Durante gas O2  heterogeneous   yes None
-US4918249   MO3/SiO2/Al2O3  Fe  723 -1.64   47  Durante gas O2  heterogeneous   no  None
-US4918249   Sodalite    Fe  717 -1.31   54  Durante gas O2  heterogeneous   yes None
-US4918249   glass-beads Fe  680 -2.7    47  Durante gas O2  heterogeneous   no  None
-US4918249   glass-beads Fe  691 -1.85   44  Durante gas O2  heterogeneous   no  None
-US4918249   glass-beads Fe  695 -1.6    56  Durante gas O2  heterogeneous   no  None
-US4918249   glass-beads Fe  703 -1.37   56  Durante gas O2  heterogeneous   no  None
-US4918249   hydroxysodalite Fe  708 -2.52   59  Durante gas O2  heterogeneous   yes None
-US4918249   hydroxysodalite Fe  718 -1.29   24  Durante gas O2  heterogeneous   yes None
-US4918249   hydroxysodalite Fe  707 -1.28   18  Durante gas O2  heterogeneous   yes None
-10.1039/c39940002209    ZSM-5   Fe  700 -2.41   0   Wang    gas O2  heterogeneous   yes None
-10.1039/c39940002209    ZSM-5   Fe  700 -2.04   0   Wang    gas O2  heterogeneous   yes None
-10.1039/c39940002209    ferrisilicate   Fe  700 -2.52   0   Wang    gas O2  heterogeneous   yes None
-10.1039/c39940002209    ferrisilicate   Fe  700 -1.82   0   Wang    gas O2  heterogeneous   yes None
-10.1039/c39940002209    FAPO-5  Fe  700 -2.1    0   Wang    gas O2  heterogeneous   yes None
-10.1039/c39940002209    FAPO-5  Fe  700 -1.83   1.9 Wang    gas O2  heterogeneous   yes None
-10.1039/c39940002209    phosphate   Fe  700 -3.1    1.6 Wang    gas O2  heterogeneous   no  None
-10.1039/c39940002209    phosphate   Fe  700 -2.72   20.3    Wang    gas O2  heterogeneous   no  None
-10.1039/c39940002209    phosphate   Fe  700 -2.29   25.7    Wang    gas O2  heterogeneous   no  None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO4    Fe  673 -3.3    0   Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO5    Fe  723 -2.96   0   Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO6    Fe  673 -2.52   15  Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO7    Fe  723 -1.94   15.1    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO8    Fe  673 -2.08   23.6    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO9    Fe  723 -1.62   20.5    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO10   Fe  673 -2.01   23.7    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO11   Fe  723 -1.52   17.3    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO12   Fe  673 -2.06   20.2    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO13   Fe  723 -1.47   15.8    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO14   Fe  673 -2.06   35.3    Wang    gas N2O heterogeneous   yes None
-10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO15   Fe  723 -1.7    32.9    Wang    gas N2O heterogeneous   yes None
-10.1021/ie00016a002 V2O5/silicate   V   713 -3.3    13.3    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   733 -2.89   27.7    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   763 -1.94   10.1    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   713 -3.15   56.7    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   733 -2.54   31.3    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   763 -1.77   10.2    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   713 -2.55   18.4    Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   733 -2.04   8.7 Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   763 -1.33   2.7 Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   713 -2.31   6.8 Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   733 -1.75   3.1 Chen    gas N2O heterogeneous   no  None
-10.1021/ie00016a002 V2O5/silicate   V   763 -1.06   0.2 Chen    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2004.09.005    ZSM-5   Fe  903 -0.95   16.51   Michalkiewicz   gas O2  heterogeneous   yes None
-10.1016/j.apcata.2004.09.005    ZSM-5   Fe  903 -0.72   14.17   Michalkiewicz   gas O2  heterogeneous   yes None
-10.1016/j.apcata.2004.09.005    ZSM-5   Fe  903 -0.5    10.79   Michalkiewicz   gas O2  heterogeneous   yes None
-10.1016/j.apcata.2004.09.005    ZSM-5   Fe  623 -3.22   74.37   Michalkiewicz   gas O2  heterogeneous   yes None
-10.1016/j.apcata.2004.09.005    ZSM-5   Fe  623 -3.15   69.13   Michalkiewicz   gas O2  heterogeneous   yes None
-10.1016/j.apcata.2004.09.005    ZSM-5   Fe  623 -3  63.47   Michalkiewicz   gas O2  heterogeneous   yes None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.51   2.1 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.36   1.9 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.35   2.5 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.19   1.8 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.16   1.2 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.35   1.9 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.32   2.6 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.29   2.5 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.27   2.3 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.82   9.1 Polniser    gas N2O heterogeneous   no  None
-10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.89   10.1    Polniser    gas N2O heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Mo  723 -2.52   11  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Mo  773 -1.92   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Cu  723 -2.22   19  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Cu  773 -1.38   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Co  723 -2.3    14  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Co  773 -1.54   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Fe  723 -2.3    14  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Fe  773 -1.41   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    V   723 -2.22   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    V   773 -2.22   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Ga  723 -1.89   10  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   MoO3    Ga  773 -1.49   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 W   723 -2.3    6   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 W   773 -2.4    0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Cu  723 -2.52   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Cu  773 -2.4    0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Co  723 -1.92   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Co  773 -2.4    0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Fe  723 -2.7    0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Fe  773 -2.22   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 V   723 -2.1    16  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 V   773 -1.92   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Ga  723 -2.4    11  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   WO3 Ga  773 -1.74   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   Ga2O3/MoO3  Ga  723 -1.52   22  Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   Ga2O3/MoO4  Ga  773 -1.51   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   ZnO/MoO3    Zn  728 -2.4    0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   ZnO/MoO4    Zn  773 -1.44   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   Ga2O3   Ga  723 -1.82   3   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   Ga2O3   Ga  773 -1.51   0   Taylor  gas O2  heterogeneous   no  None
-10.1016/S0920-5861(98)00095-9   quartz-packing  -   723 -2.4    0   Taylor  gas O2  heterogeneous   yes None
-10.1016/S0920-5861(98)00095-9   quartz-packing  -   748 -1.46   15  Taylor  gas O2  heterogeneous   yes None
-10.1016/S0920-5861(98)00095-9   quartz-packing  -   773 -1.46   15  Taylor  gas O2  heterogeneous   yes None
-10.1016/S0920-5861(98)00095-9   quartz-packing  -   723 -1.09   29  Taylor  gas O2  heterogeneous   yes None
-10.1016/S0920-5861(98)00095-9   empty-tube  -   773 -1.1    19  Taylor  gas O2  heterogeneous   yes None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.8    2   McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO3  Fe  873 -1.77   1   McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO4  Fe  873 -2.15   5.746112338 McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO5  Fe  873 -1.95   4.36750074  McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO6  Fe  873 -1.74   1.780469479 McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO7  Fe  873 -1.61   1.622800027 McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO8  Fe  873 -1.51   1.292092621 McCormick   gas O2  heterogeneous   no  None
-10.1016/S0920-5861(99)00243-6   FePO4/SiO9  Fe  873 -1.48   1.123608297 McCormick   gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   868 -1.52   0.7 Berndt  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   897 -1.18   0.4 Berndt  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   924 -1.03   0.3 Berndt  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   868 -1.49   0.6 Berndt  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   899 -1.27   0.2 Berndt  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   906 -1  2   Berndt  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2786  V2O5/silicate   V   929 -0.96   0.2 Berndt  gas O2  heterogeneous   no  None
-10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.5    0.2 Fornes  gas O2  heterogeneous   no  None
-10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.85   0.2 Fornes  gas O2  heterogeneous   no  None
-10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -2.04   0.4 Fornes  gas O2  heterogeneous   no  None
-10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.74   0.4 Fornes  gas O2  heterogeneous   no  None
-10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.93   0.5 Fornes  gas O2  heterogeneous   no  None
-10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -2.24   0.8 Fornes  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  773 -2.24   2   Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  823 -1.92   1   Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  873 -1.4    1   Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  923 -1.18   0   Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  773 -2  13  Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  823 -1.54   8   Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  873 -1.09   11  Sugino  gas O2  heterogeneous   no  None
-10.1006/jcat.1999.2732  MoO3/silica Mo  923 -0.92   4   Sugino  gas O2  heterogeneous   no  None
-GB1244001A  MoO3-ZnO/alumina-silicate   Mo  766 -1.64   51  dowden  gas O2  heterogeneous   no  None
-GB1244001A  (MoO3)3-Fe2O3/alumina-silica    Mo  712 -1.68   65  dowden  gas O2  heterogeneous   no  None
-GB1244001A  MoO3-UO2/alumina-silica Mo  743 -1.46   75  dowden  gas O2  heterogeneous   no  None
-GB1244001A  MoO3-VO2/alumina-silica Mo  766 -1.59   49  dowden  gas O2  heterogeneous   no  None
-GB1244001A  MoO3/alumina-silica Mo  733 -1.64   19  dowden  gas O2  heterogeneous   no  None
-10.1007/s11244-005-2894-5   MoOx/La-Co-O    Mo  693 -1.05   28.8    Zhang   gas O2  heterogeneous   no  None
-10.1007/s11244-005-2894-6   MoOx/La-Co-O    Mo  693 -0.95   60  Zhang   gas O2  heterogeneous   no  None
-10.1007/s11244-005-2894-7   MoOx/La-Co-O    Mo  693 -0.94   33.2    Zhang   gas O2  heterogeneous   no  None
-10.1016/S1003-9953(08)60021-3   Mo-V-Cr-Bi  Mo  753 -1  41  Zhang   gas O2  heterogeneous   no  None
-10.1039/C6CC07893A  SSZ-13  Cu  523 -3.8    24  Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  533 -3.66   27  Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  538 -3.49   20.7    Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  543 -3.26   15.8    Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  548 -3.03   11.4    Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  573 -2.12   2.3 Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  573 -2.92   12.5    Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  543 -2.89   3   Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  573 -2.92   2   Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  SSZ-13  Cu  543 -3.66   39.7    Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  MOR Cu  543 -3.89   24  Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  MOR Cu  543 -3.2    1.1 Lobo    gas N2O heterogeneous   yes None
-10.1039/C6CC07893A  ZSM-5   Cu  543 -2.17   0.3 Lobo    gas N2O heterogeneous   yes None
-10.1021/acscentsci.6b00139  ZSM-5   Cu  483 -5  71  Leshkov gas O2  heterogeneous   yes None
-None    SSZ-13  Cu  623 -3  90  Leshkov gas O2  heterogeneous   yes thesis
-10.1002/anie.201108706  ZSM-5   Cu  323 -2.52   83  Hutchings   aqueous H2O2    heterogeneous   yes None
-10.1002/anie.201108706  Cu-Fe/ZSM-5 Fe  323 -2.15   85  Hutchings   aqueous H2O2    heterogeneous   yes None
-10.1002/anie.201108706  Cu-Fe/ZSM-5 Fe  323 -2.3    88  Hutchings   aqueous H2O2    heterogeneous   yes None
-10.1002/anie.201108706  Cu-Fe/silicalite    Fe  323 -1  93  Hutchings   aqueous H2O2    heterogeneous   yes None
-10.1042/bj1650395   MMO Fe  300 -1.82   99  Dalton  aqueous O2  homogeneous yes enzyme
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -1.44   1.9 Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -1.72   9.3 Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -1.89   19  Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -2.12   42  Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -1.66   2.7 Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -2.19   31  Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -2.57   57  Panov   gas N2O heterogeneous   yes None
-10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -2.72   62  Panov   gas N2O heterogeneous   yes None
-10.1016/S0926-860X(97)00105-1   CuCl16Pc    Cu  273 -1.32   40.2    Raja    aqueous O2/TBHP homogeneous yes None
-10.1016/S0926-860X(97)00105-2   CoCl16Pc    Co  273 -1.51   10.2    Raja    aqueous O2/TBHP homogeneous yes None
-10.1016/S0926-860X(97)00105-3   FeCl16Pc    Fe  273 -1.28   41.2    Raja    aqueous O2/TBHP homogeneous yes None
-10.1016/S0926-860X(97)00105-4   CuCl16Pc/FAU-X  Cu  273 -1.38   51.5    Raja    aqueous O2/TBHP heterogeneous   yes None
-10.1016/S0926-860X(97)00105-5   CuCl16Pc/FAU-Y  Cu  273 -1.41   53.5    Raja    aqueous O2/TBHP heterogeneous   yes None
-10.1016/S0926-860X(97)00105-6   CuCl16Pc/L  Cu  273 -1.96   10.7    Raja    aqueous O2/TBHP heterogeneous   yes None
-10.1016/S0926-860X(97)00105-7   CoCl16Pc/FAU-X  Co  273 -1.55   12.5    Raja    aqueous O2/TBHP heterogeneous   yes None
-10.1016/S0926-860X(97)00105-8   FeCl16Pc/FAU-X  Fe  273 -1.31   52.6    Raja    aqueous O2/TBHP heterogeneous   yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.33   1   Seki    aqueous H2O2    homogeneous yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -3.36   99.11894273 Seki    aqueous H2O2    homogeneous yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -2.04   44.78707783 Seki    aqueous H2O2    homogeneous yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.79   23.20117474 Seki    aqueous H2O2    homogeneous yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.72   18.20851689 Seki    aqueous H2O2    homogeneous yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.66   14.53744493 Seki    aqueous H2O2    homogeneous yes None
-10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.59   11.89427313 Seki    aqueous H2O2    homogeneous yes None
-10.1006/jcat.1995.1208  APO-5   Fe  673 -1.82   2.5 Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  673 -2.6    21  Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  673 -2.22   24  Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  633 -3.8    77.9201373  Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  648 -3.46   67.15716589 Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  690 -2.69   34.85404862 Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  710 -2.27   25.53624003 Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  717 -2.06   20.85603113 Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  723 -1.96   18.60218076 Wang    gas O2/H2   heterogeneous   yes None
-10.1006/jcat.1995.1208  PO4 Fe  666 -3.12   49.52671214 Wang    gas O2/H2   heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  625 -2.99   80.00958837 Wang    gas N2O heterogeneous   no  None
-10.1039/Ft9959103953    PO4 Fe  650 -2.66   64.49636404 Wang    gas N2O heterogeneous   no  None
-10.1039/Ft9959103953    PO4 Fe  674 -2.12   40.02674887 Wang    gas N2O heterogeneous   no  None
-10.1039/Ft9959103953    PO4 Fe  699 -1.67   25.00302437 Wang    gas N2O heterogeneous   no  None
-10.1039/Ft9959103953    PO4 Fe  723 -1.17   16.81930399 Wang    gas N2O heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  648 -2.64   52.08701039 Wang    gas N2O heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  648 -2.3    48.74069647 Wang    gas N2O heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  648 -2.16   45.39562769 Wang    gas N2O heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  648 -2.07   46.87578794 Wang    gas N2O heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  648 -2.13   44.36838714 Wang    gas N2O heterogeneous   yes None
-10.1039/Ft9959103953    PO4 Fe  648 -2.22   42.76091132 Wang    gas N2O heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   K7PW9Fe2NiO37   Fe  683 -1.39   42  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  680 -1.34   64  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  689 -1.24   70  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  691 -1.27   68  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  695 -1.27   65  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  705 -1.26   63  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  715 -1.21   64  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SOD Fe  693 -2.7    27  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   hydroxysodalite Fe  703 -2.52   9   Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   hydroxysodalite Fe  718 -1.29   24  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   hydroxysodalite Fe  704 -1.29   26  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   SiO2    Fe  671 -2.3    10  Lyons   gas O2  heterogeneous   no  None
-10.1016/S0167-2991(08)61930-8   SiO2    Fe  682 -1.92   18  Lyons   gas O2  heterogeneous   no  None
-10.1016/S0167-2991(08)61930-8   SiO2    Fe  693 -1.57   20  Lyons   gas O2  heterogeneous   no  None
-10.1016/S0167-2991(08)61930-8   SiO2    Fe  701 -1.41   23  Lyons   gas O2  heterogeneous   no  None
-10.1016/S0167-2991(08)61930-8   ZEOL    Fe  673 -1.62   33  Lyons   gas O2  heterogeneous   yes None
-10.1016/S0167-2991(08)61930-8   ZEOL    Fe  703 -1.42   34  Lyons   gas O2  heterogeneous   yes None
-10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  753 -3.22   96  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO3   Mo  763 -3  96  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO4   Mo  773 -2.77   85  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO5   Mo  783 -2.66   72  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO6   Mo  793 -2.59   66  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO7   Mo  803 -2.51   59  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO8   Mo  813 -2.33   54  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO9   Mo  823 -2.15   46  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO10  Mo  843 -1.92   18  Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO11  Mo  843 -1.54   13.8    Khan    gas N2O heterogeneous   no  None
-10.1016/0021-9517(85)90340-9    MoO3/SiO12  Mo  863 -1.59   16  Khan    gas N2O heterogeneous   no  None
-10.1021/ie00029a008 -   -   673 -1.86   44.06804734 Casey   gas O2  heterogeneous   yes Radical
-10.1021/ie00029a008 -   -   673 -1.61   32.42133347 Casey   gas O2  heterogeneous   yes Radical
-10.1021/ie00029a008 -   -   673 -1.33   22.20076078 Casey   gas O2  heterogeneous   yes Radical
-10.1021/ie00029a008 -   -   673 -1.09   15.04390321 Casey   gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   682 -2.12   54.18123451 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   691 -1.83   51.17300079 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   696 -1.71   50.90352195 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   708 -1.43   47.62033987 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   714 -1.39   38.93559014 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   732 -1.38   34.31994985 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a004 -   -   742 -1.39   33.21258325 Chun    gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   663 -1.51   47  Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   668 -1.35   37.7    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   673 -1.19   28.1    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   673 -1.07   23  Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   693 -1.39   27.2    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   648 -1.34   33.7    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   677 -1.24   36.3    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   675 -1.19   33.3    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   668 -1.05   23.5    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   678 -1.11   17.9    Foulds  gas O2  heterogeneous   yes Radical
-10.1021/ie00017a003 -   -   658 -1.17   23.6    Foulds  gas O2  heterogeneous   yes Radical
-10.1002/anie.201704704  Ceria-Zirconia  Ni  723 -0.82   43  Okolie  gas O2  heterogeneous   no  None
-10.1021/jacs.7b11010    Zirconia    Rh  343 -4.86   71  Kwon    aqueous H2O2    heterogeneous   yes None
-10.1126/science.aan6515 -   Au-Pd   323 -3.85   100 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.49   97.10144928 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.36   95.18716578 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.24   92.33870968 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.18   91.57894737 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.18   81.75438596 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.1    86.39053254 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3.05   84.375  Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -3  79.86111111 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1126/science.aan6515 -   Au-Pd   323 -2.93   77.55905512 Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.467361417    0   Mountfort   aqueous O2  homogeneous yes MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.057991947    36.36363636 Mountfort   aqueous O2  homogeneous yes MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.081159812    61.36986301 Mountfort   aqueous O2  homogeneous yes MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.03814763 15.38461538 Mountfort   aqueous O2  homogeneous yes MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.471433867    0   Mountfort   aqueous O2  homogeneous yes MMO
-10.1038/nature24640 ZSM-5   Rh  423 -2.397940009    71.42857143 Shan    aqueous O2/CO   heterogeneous   yes None
-10.1038/nature24640 ZSM-5   Rh  423 -2.301029996    71.09375    Shan    aqueous O2/CO   heterogeneous   yes None
-10.1038/nature24640 ZSM-5   Rh  423 -1.853871964    73.06397306 Shan    aqueous O2/CO   heterogeneous   yes None
-10.1038/nature24640 ZSM-5   Rh  423 -1.397940009    63.69346734 Shan    aqueous O2/CO   heterogeneous   yes None
+DOI cattype cat T   log_conv    sel author  rxntype oxidant catalysis   single-site tag category
+10.1016/j.jcat.2004.04.010  MFI Fe  673 -0.21   2.00    Wood    gas N2O heterogeneous   yes None    Zeolite
+US4918249   sodalite    Fe  670 -1.42   59.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  675 -1.37   63.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  680 -1.34   64.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  686 -1.26   66.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  687 -1.28   70.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  689 -1.24   70.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  691 -1.27   68.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  695 -1.27   65.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  700 -1.29   66.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  705 -1.26   63.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  715 -1.21   64.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  725 -1.25   59.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  735 -1.24   58.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  692 -1.35   59.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  698 -1.27   63.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  703 -1.24   62.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  713 -1.28   59.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  703 -1.40   52.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  711 -1.34   55.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  717 -1.31   54.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  710 -1.62   43.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  722 -1.51   45.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  724 -1.46   46.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  728 -1.43   45.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  732 -1.41   44.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  726 -1.80   38.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  739 -1.59   40.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  701 -1.24   24.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  707 -1.24   25.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   sodalite    Fe  712 -1.25   21.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   SiO2    Fe  712 -1.64   25.00   Durante gas O2  heterogeneous   no  None    Oxide
+US4918249   ZSM-5   Fe  709 -1.29   18.00   Durante gas O2  heterogeneous   yes None    Zeolite
+US4918249   sodalite    Fe  708 -1.24   25.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   MO3/SiO2/Al2O3  Fe  723 -1.64   47.00   Durante gas O2  heterogeneous   no  None    Oxide
+US4918249   Sodalite    Fe  717 -1.31   54.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   glass-beads Fe  680 -2.70   47.00   Durante gas O2  heterogeneous   no  None    Oxide
+US4918249   glass-beads Fe  691 -1.85   44.00   Durante gas O2  heterogeneous   no  None    Oxide
+US4918249   glass-beads Fe  695 -1.60   56.00   Durante gas O2  heterogeneous   no  None    Oxide
+US4918249   glass-beads Fe  703 -1.37   56.00   Durante gas O2  heterogeneous   no  None    Oxide
+US4918249   hydroxysodalite Fe  708 -2.52   59.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   hydroxysodalite Fe  718 -1.29   24.00   Durante gas O2  heterogeneous   yes None    Sodalite
+US4918249   hydroxysodalite Fe  707 -1.28   18.00   Durante gas O2  heterogeneous   yes None    Sodalite
+10.1039/c39940002209    ZSM-5   Fe  700 -2.41   0.00    Wang    gas O2  heterogeneous   yes None    Zeolite
+10.1039/c39940002209    ZSM-5   Fe  700 -2.04   0.00    Wang    gas O2  heterogeneous   yes None    Zeolite
+10.1039/c39940002209    ferrisilicate   Fe  700 -2.52   0.00    Wang    gas O2  heterogeneous   yes None    Zeolite
+10.1039/c39940002209    ferrisilicate   Fe  700 -1.82   0.00    Wang    gas O2  heterogeneous   yes None    Zeolite
+10.1039/c39940002209    FAPO-5  Fe  700 -2.10   0.00    Wang    gas O2  heterogeneous   yes None    Zeolite
+10.1039/c39940002209    FAPO-5  Fe  700 -1.83   1.90    Wang    gas O2  heterogeneous   yes None    Zeolite
+10.1039/c39940002209    phosphate   Fe  700 -3.10   1.60    Wang    gas O2  heterogeneous   no  None    Phosphate
+10.1039/c39940002209    phosphate   Fe  700 -2.72   20.30   Wang    gas O2  heterogeneous   no  None    Phosphate
+10.1039/c39940002209    phosphate   Fe  700 -2.29   25.70   Wang    gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO4    Fe  673 -3.30   0.00    Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO5    Fe  723 -2.96   0.00    Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO6    Fe  673 -2.52   15.00   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO7    Fe  723 -1.94   15.10   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO8    Fe  673 -2.08   23.60   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO9    Fe  723 -1.62   20.50   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO10   Fe  673 -2.01   23.70   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO11   Fe  723 -1.52   17.30   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO12   Fe  673 -2.06   20.20   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO13   Fe  723 -1.47   15.80   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO14   Fe  673 -2.06   35.30   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1016/S0021-9517(03)00077-0   FePO4/MCM-41/PO15   Fe  723 -1.70   32.90   Wang    gas N2O heterogeneous   yes None    Phosphate/zeolite
+10.1021/ie00016a002 V2O5/silicate   V   713 -3.30   13.30   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   733 -2.89   27.70   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   763 -1.94   10.10   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   713 -3.15   56.70   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   733 -2.54   31.30   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   763 -1.77   10.20   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   713 -2.55   18.40   Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   733 -2.04   8.70    Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   763 -1.33   2.70    Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   713 -2.31   6.80    Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   733 -1.75   3.10    Chen    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00016a002 V2O5/silicate   V   763 -1.06   0.20    Chen    gas N2O heterogeneous   no  None    Oxide
+10.1016/j.apcata.2004.09.005    ZSM-5   Fe  903 -0.95   16.51   Michalkiewicz   gas O2  heterogeneous   yes None    ZSM-5
+10.1016/j.apcata.2004.09.005    ZSM-5   Fe  903 -0.72   14.17   Michalkiewicz   gas O2  heterogeneous   yes None    ZSM-5
+10.1016/j.apcata.2004.09.005    ZSM-5   Fe  903 -0.50   10.79   Michalkiewicz   gas O2  heterogeneous   yes None    ZSM-5
+10.1016/j.apcata.2004.09.005    ZSM-5   Fe  623 -3.22   74.37   Michalkiewicz   gas O2  heterogeneous   yes None    ZSM-5
+10.1016/j.apcata.2004.09.005    ZSM-5   Fe  623 -3.15   69.13   Michalkiewicz   gas O2  heterogeneous   yes None    ZSM-5
+10.1016/j.apcata.2004.09.005    ZSM-5   Fe  623 -3.00   63.47   Michalkiewicz   gas O2  heterogeneous   yes None    ZSM-5
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.51   2.10    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.36   1.90    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.35   2.50    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.19   1.80    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.16   1.20    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.35   1.90    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.32   2.60    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.29   2.50    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.27   2.30    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.82   9.10    Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/j.apcata.2011.04.022    pyrophosphate   Cu-Fe   903 -1.89   10.10   Polniser    gas N2O heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(98)00095-9   MoO3    Mo  723 -2.52   11.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Mo  773 -1.92   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Cu  723 -2.22   19.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Cu  773 -1.38   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Co  723 -2.30   14.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Co  773 -1.54   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Fe  723 -2.30   14.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Fe  773 -1.41   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    V   723 -2.22   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    V   773 -2.22   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Ga  723 -1.89   10.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   MoO3    Ga  773 -1.49   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 W   723 -2.30   6.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 W   773 -2.40   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Cu  723 -2.52   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Cu  773 -2.40   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Co  723 -1.92   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Co  773 -2.40   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Fe  723 -2.70   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Fe  773 -2.22   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 V   723 -2.10   16.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 V   773 -1.92   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Ga  723 -2.40   11.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   WO3 Ga  773 -1.74   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   Ga2O3/MoO3  Ga  723 -1.52   22.00   Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   Ga2O3/MoO4  Ga  773 -1.51   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   ZnO/MoO3    Zn  728 -2.40   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   ZnO/MoO4    Zn  773 -1.44   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   Ga2O3   Ga  723 -1.82   3.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   Ga2O3   Ga  773 -1.51   0.00    Taylor  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0920-5861(98)00095-9   quartz-packing  -   723 -2.40   0.00    Taylor  gas O2  heterogeneous   yes None    Gas-phase
+10.1016/S0920-5861(98)00095-9   quartz-packing  -   748 -1.46   15.00   Taylor  gas O2  heterogeneous   yes None    Gas-phase
+10.1016/S0920-5861(98)00095-9   quartz-packing  -   773 -1.46   15.00   Taylor  gas O2  heterogeneous   yes None    Gas-phase
+10.1016/S0920-5861(98)00095-9   quartz-packing  -   723 -1.09   29.00   Taylor  gas O2  heterogeneous   yes None    Gas-phase
+10.1016/S0920-5861(98)00095-9   empty-tube  -   773 -1.10   19.00   Taylor  gas O2  heterogeneous   yes None    Gas-phase
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.80   2.00    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.77   1.00    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -2.15   5.75    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.95   4.37    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.74   1.78    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.61   1.62    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.51   1.29    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1016/S0920-5861(99)00243-6   FePO4/SiO2  Fe  873 -1.48   1.12    McCormick   gas O2  heterogeneous   no  None    Phosphate
+10.1006/jcat.1999.2786  V2O5/silicate   V   868 -1.52   0.70    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2786  V2O5/silicate   V   897 -1.18   0.40    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2786  V2O5/silicate   V   924 -1.03   0.30    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2786  V2O5/silicate   V   868 -1.49   0.60    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2786  V2O5/silicate   V   899 -1.27   0.20    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2786  V2O5/silicate   V   906 -1.00   2.00    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2786  V2O5/silicate   V   929 -0.96   0.20    Berndt  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.50   0.20    Fornes  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.85   0.20    Fornes  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -2.04   0.40    Fornes  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.74   0.40    Fornes  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -1.93   0.50    Fornes  gas O2  heterogeneous   no  None    Oxide
+10.1016/S0926-860X(03)00226-6   V2O5/silicate   V   873 -2.24   0.80    Fornes  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  773 -2.24   2.00    Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  823 -1.92   1.00    Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  873 -1.40   1.00    Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  923 -1.18   0.00    Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  773 -2.00   13.00   Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  823 -1.54   8.00    Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  873 -1.09   11.00   Sugino  gas O2  heterogeneous   no  None    Oxide
+10.1006/jcat.1999.2732  MoO3/silica Mo  923 -0.92   4.00    Sugino  gas O2  heterogeneous   no  None    Oxide
+GB1244001A  MoO3-ZnO/alumina-silicate   Mo  766 -1.64   51.00   dowden  gas O2  heterogeneous   no  None    Oxide
+GB1244001A  (MoO3)3-Fe2O3/alumina-silica    Mo  712 -1.68   65.00   dowden  gas O2  heterogeneous   no  None    Oxide
+GB1244001A  MoO3-UO2/alumina-silica Mo  743 -1.46   75.00   dowden  gas O2  heterogeneous   no  None    Oxide
+GB1244001A  MoO3-VO2/alumina-silica Mo  766 -1.59   49.00   dowden  gas O2  heterogeneous   no  None    Oxide
+GB1244001A  MoO3/alumina-silica Mo  733 -1.64   19.00   dowden  gas O2  heterogeneous   no  None    Oxide
+10.1007/s11244-005-2894-5   MoOx/La-Co-O    Mo  693 -1.05   28.80   Zhang   gas O2  heterogeneous   no  None    Oxide
+10.1007/s11244-005-2894-6   MoOx/La-Co-O    Mo  693 -0.95   60.00   Zhang   gas O2  heterogeneous   no  None    Oxide
+10.1007/s11244-005-2894-7   MoOx/La-Co-O    Mo  693 -0.94   33.20   Zhang   gas O2  heterogeneous   no  None    Oxide
+10.1016/S1003-9953(08)60021-3   Mo-V-Cr-Bi  Mo  753 -1.00   41.00   Zhang   gas O2  heterogeneous   no  None    Oxide
+10.1039/C6CC07893A  SSZ-13  Cu  523 -3.80   24.00   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  533 -3.66   27.00   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  538 -3.49   20.70   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  543 -3.26   15.80   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  548 -3.03   11.40   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  573 -2.12   2.30    Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  573 -2.92   12.50   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  543 -2.89   3.00    Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  573 -2.92   2.00    Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  SSZ-13  Cu  543 -3.66   39.70   Lobo    gas N2O heterogeneous   yes None    SSZ-13
+10.1039/C6CC07893A  MOR Cu  543 -3.89   24.00   Lobo    gas N2O heterogeneous   yes None    MOR
+10.1039/C6CC07893A  MOR Cu  543 -3.20   1.10    Lobo    gas N2O heterogeneous   yes None    MOR
+10.1039/C6CC07893A  ZSM-5   Cu  543 -2.17   0.30    Lobo    gas N2O heterogeneous   yes None    ZSM-5
+10.1021/acscentsci.6b00139  ZSM-5   Cu  483 -5.00   71.00   Leshkov gas O2  heterogeneous   yes None    ZSM-5
+None    SSZ-13  Cu  623 -3.00   90.00   Leshkov gas O2  heterogeneous   yes thesis  SSZ-13
+10.1002/anie.201108706  ZSM-5   Cu  323 -2.52   83.00   Hutchings   aqueous H2O2    heterogeneous   yes None    ZSM-5
+10.1002/anie.201108706  Cu-Fe/ZSM-5 Fe  323 -2.15   85.00   Hutchings   aqueous H2O2    heterogeneous   yes None    ZSM-5
+10.1002/anie.201108706  Cu-Fe/ZSM-5 Fe  323 -2.30   88.00   Hutchings   aqueous H2O2    heterogeneous   yes None    ZSM-5
+10.1002/anie.201108706  Cu-Fe/silicalite    Fe  323 -1.00   93.00   Hutchings   aqueous H2O2    heterogeneous   yes None    Silicalite
+10.1042/bj1650395   MMO Fe  300 -1.82   99.00   Dalton  aqueous O2  homogeneous yes enzyme  MMO
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -1.44   1.90    Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -1.72   9.30    Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -1.89   19.00   Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  573 -2.12   42.00   Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -1.66   2.70    Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -2.19   31.00   Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -2.57   57.00   Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/j.jcat.2014.07.009  ZSM-5   Fe  548 -2.72   62.00   Panov   gas N2O heterogeneous   yes None    ZSM-5
+10.1016/S0926-860X(97)00105-1   CuCl16Pc    Cu  273 -1.32   40.20   Raja    aqueous O2/TBHP homogeneous yes None    Phthalocyanine
+10.1016/S0926-860X(97)00105-2   CoCl16Pc    Co  273 -1.51   10.20   Raja    aqueous O2/TBHP homogeneous yes None    Phthalocyanine
+10.1016/S0926-860X(97)00105-3   FeCl16Pc    Fe  273 -1.28   41.20   Raja    aqueous O2/TBHP homogeneous yes None    Phthalocyanine
+10.1016/S0926-860X(97)00105-4   CuCl16Pc/FAU-X  Cu  273 -1.38   51.50   Raja    aqueous O2/TBHP heterogeneous   yes None    Phthalocyanine/zeolite
+10.1016/S0926-860X(97)00105-5   CuCl16Pc/FAU-Y  Cu  273 -1.41   53.50   Raja    aqueous O2/TBHP heterogeneous   yes None    Phthalocyanine/zeolite
+10.1016/S0926-860X(97)00105-6   CuCl16Pc/L  Cu  273 -1.96   10.70   Raja    aqueous O2/TBHP heterogeneous   yes None    Phthalocyanine/zeolite
+10.1016/S0926-860X(97)00105-7   CoCl16Pc/FAU-X  Co  273 -1.55   12.50   Raja    aqueous O2/TBHP heterogeneous   yes None    Phthalocyanine/zeolite
+10.1016/S0926-860X(97)00105-8   FeCl16Pc/FAU-X  Fe  273 -1.31   52.60   Raja    aqueous O2/TBHP heterogeneous   yes None    Phthalocyanine/zeolite
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.33   1.00    Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -3.36   99.12   Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -2.04   44.79   Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.79   23.20   Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.72   18.21   Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.66   14.54   Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1021/jp000406y   H4PV1Mo11O40    Mo  353 -1.59   11.89   Seki    aqueous H2O2    homogeneous yes None    Oxide
+10.1006/jcat.1995.1208  APO-5   Fe  673 -1.82   2.50    Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  673 -2.60   21.00   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  673 -2.22   24.00   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  633 -3.80   77.92   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  648 -3.46   67.16   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  690 -2.69   34.85   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  710 -2.27   25.54   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  717 -2.06   20.86   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  723 -1.96   18.60   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1006/jcat.1995.1208  PO4 Fe  666 -3.12   49.53   Wang    gas O2/H2   heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  625 -2.99   80.01   Wang    gas N2O heterogeneous   no  None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  650 -2.66   64.50   Wang    gas N2O heterogeneous   no  None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  674 -2.12   40.03   Wang    gas N2O heterogeneous   no  None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  699 -1.67   25.00   Wang    gas N2O heterogeneous   no  None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  723 -1.17   16.82   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  648 -2.64   52.09   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  648 -2.30   48.74   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  648 -2.16   45.40   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  648 -2.07   46.88   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  648 -2.13   44.37   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1039/Ft9959103953    PO4 Fe  648 -2.22   42.76   Wang    gas N2O heterogeneous   yes None    Phosphate
+10.1016/S0167-2991(08)61930-8   K7PW9Fe2NiO37   Fe  683 -1.39   42.00   Lyons   gas O2  heterogeneous   yes None    Oxide
+10.1016/S0167-2991(08)61930-8   SOD Fe  680 -1.34   64.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SOD Fe  689 -1.24   70.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SOD Fe  691 -1.27   68.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SOD Fe  695 -1.27   65.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SOD Fe  705 -1.26   63.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SOD Fe  715 -1.21   64.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SOD Fe  693 -2.70   27.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   hydroxysodalite Fe  703 -2.52   9.00    Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   hydroxysodalite Fe  718 -1.29   24.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   hydroxysodalite Fe  704 -1.29   26.00   Lyons   gas O2  heterogeneous   yes None    Sodalite
+10.1016/S0167-2991(08)61930-8   SiO2    Fe  671 -2.30   10.00   Lyons   gas O2  heterogeneous   no  None    Oxide
+10.1016/S0167-2991(08)61930-8   SiO2    Fe  682 -1.92   18.00   Lyons   gas O2  heterogeneous   no  None    Oxide
+10.1016/S0167-2991(08)61930-8   SiO2    Fe  693 -1.57   20.00   Lyons   gas O2  heterogeneous   no  None    Oxide
+10.1016/S0167-2991(08)61930-8   SiO2    Fe  701 -1.41   23.00   Lyons   gas O2  heterogeneous   no  None    Oxide
+10.1016/S0167-2991(08)61930-8   ZEOL    Fe  673 -1.62   33.00   Lyons   gas O2  heterogeneous   yes None    Zeolite
+10.1016/S0167-2991(08)61930-8   ZEOL    Fe  703 -1.42   34.00   Lyons   gas O2  heterogeneous   yes None    Zeolite
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  753 -3.22   96.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  763 -3.00   96.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  773 -2.77   85.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  783 -2.66   72.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  793 -2.59   66.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  803 -2.51   59.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  813 -2.33   54.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  823 -2.15   46.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  843 -1.92   18.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  843 -1.54   13.80   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1016/0021-9517(85)90340-9    MoO3/SiO2   Mo  863 -1.59   16.00   Khan    gas N2O heterogeneous   no  None    Oxide
+10.1021/ie00029a008 -   -   673 -1.86   44.07   Casey   gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00029a008 -   -   673 -1.61   32.42   Casey   gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00029a008 -   -   673 -1.33   22.20   Casey   gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00029a008 -   -   673 -1.09   15.04   Casey   gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   682 -2.12   54.18   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   691 -1.83   51.17   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   696 -1.71   50.90   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   708 -1.43   47.62   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   714 -1.39   38.94   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   732 -1.38   34.32   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a004 -   -   742 -1.39   33.21   Chun    gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   663 -1.51   47.00   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   668 -1.35   37.70   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   673 -1.19   28.10   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   673 -1.07   23.00   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   693 -1.39   27.20   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   648 -1.34   33.70   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   677 -1.24   36.30   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   675 -1.19   33.30   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   668 -1.05   23.50   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   678 -1.11   17.90   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1021/ie00017a003 -   -   658 -1.17   23.60   Foulds  gas O2  heterogeneous   yes Radical Gas-phase
+10.1002/anie.201704704  Ceria-Zirconia  Ni  723 -0.82   43.00   Okolie  gas O2  heterogeneous   no  None    Oxide
+10.1021/jacs.7b11010    Zirconia    Rh  343 -4.86   71.00   Kwon    aqueous H2O2    heterogeneous   yes None    Oxide
+10.1126/science.aan6515 -   Au-Pd   323 -3.85   100.00  Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.49   97.10   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.36   95.19   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.24   92.34   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.18   91.58   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.18   81.75   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.10   86.39   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.05   84.38   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -3.00   79.86   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1126/science.aan6515 -   Au-Pd   323 -2.93   77.56   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.47   0.00    Mountfort   aqueous O2  homogeneous yes MMO MMO
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.06   36.36   Mountfort   aqueous O2  homogeneous yes MMO MMO
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.08   61.37   Mountfort   aqueous O2  homogeneous yes MMO MMO
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.04   15.38   Mountfort   aqueous O2  homogeneous yes MMO MMO
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.47   0.00    Mountfort   aqueous O2  homogeneous yes MMO MMO
+10.1038/nature24640 ZSM-5   Rh  423 -2.40   71.43   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5
+10.1038/nature24640 ZSM-5   Rh  423 -2.30   71.09   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5
+10.1038/nature24640 ZSM-5   Rh  423 -1.85   73.06   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5
+10.1038/nature24640 ZSM-5   Rh  423 -1.40   63.69   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5

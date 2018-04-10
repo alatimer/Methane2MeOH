@@ -6,7 +6,7 @@ import math
 from ase.units import kB
 import numpy as np
 from selclass import selclass
-from PointParameters import get_color
+from PointParameters import get_color,get_shape
 
 ### load DFT data ######3
 # For performance, can just use vibrations from Ni-BN since it is ~ average
@@ -28,18 +28,25 @@ solv_corr=0.22
 dEa_guess=0.55
 T_fix=700
 P = 101325
-dGcorr = dftobj.fun_dGcorr(T_fix,101325)
+dGcorr = -4.191e-4*T_fix-0.0152 #dftobj.fun_dGcorr(T_fix,101325)
 err = 0.07
 
 size=(8,6)
 fig = plt.figure(1,figsize=size)
 ax = fig.add_subplot(111)
 
+#### Plot Model selectivity ####
+conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
+selobj = selclass(conv_vec,dftobj,color='k')
+selobj.fun_err(ax,err,dEa_guess,T_fix,P)
+
 #### Experimental points #####
 labels=[]
 for cat in expclassesobj.data:
     label = '%s-%s, %s'%(cat.cat,cat.cattype,cat.author)
-    label = '%s'%(cat.cat)
+    label = '%s'%(cat.category)
+    #if cat.rxntype=='aqueous':
+    #    label = None
     if label in labels:
         label = None
     else:
@@ -50,17 +57,14 @@ for cat in expclassesobj.data:
     #plot experimental data with extrapolated selectivity
     ax.plot(cat.log_conv,
             modelsel,
-            color=get_color(cat.cat),
-            marker='o',
+            color=get_color(cat.category),
+            marker=get_shape(cat.rxntype),
             label=label,
             fillstyle='full',
             markersize=10,
             clip_on=False)
 
-#### Plot Model selectivity ####
-conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
-selobj = selclass(conv_vec,dftobj,color='k')
-selobj.fun_err(ax,err,dEa_guess,T_fix,P)
+
 
 ax.legend(loc=3,fontsize=10)
 ax.set_xlabel(r'log(CH$_4$ conversion)')

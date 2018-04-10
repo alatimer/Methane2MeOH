@@ -31,6 +31,22 @@ clrs_dict = {
     'CHA-MOM':'indianred',
     'MOR-MOM':'grey',
     'Porphyrin':'cyan',
+
+    #Exp categories
+    'Oxide':'lightgreen',
+    'Au-Pd':'blanchedalmond',
+    'Phthalocyanine':'cyan',
+    'Phthalocyanine/zeolite':'cyan',
+    'ZSM-5':'forestgreen',
+    'SSZ-13':'indianred',
+    'MOR':'powderblue',
+    'Zeolite(Generic)':'crimson',
+    'Phosphate':'goldenrod',
+    'Phosphate/zeolite':'darkred',
+    'Silicalite':'pink',
+    'Sodalite':'plum',
+    'Gas-phase':'white',
+
     
     }
 
@@ -45,6 +61,9 @@ shape_dict = {
         'CHA-MOM':'v',
         'SAPO-34-MO':'D',
         'Porphyrin':'d',
+
+        'aqueous':'d',
+        'gas':'o',
 
 }
 

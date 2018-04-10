@@ -19,6 +19,7 @@ expclassesobj = expclassesobj.classfilter(lambda x: x.cattype!='MMO')
 
 solv_corr=0.22
 dEa_theory=0.46
+sigma = 0.08
 P = 101325
 
 size=(8,6)
@@ -31,19 +32,28 @@ def sel_fun(conv,dEa,T):
     sel = (1-conv-(1-conv)**(k2_k1))/(conv*(k2_k1-1))*100
     return sel #in percent
 
+labels=[]
 for obj in expclassesobj.data:
     if obj.rxntype=='aqueous':
         dEa = dEa_theory-solv_corr
     else:
         dEa = dEa_theory
+    label=obj.category
+    if label in labels:
+        label=None
+    else:
+        labels.append(label)
     sel_pred = sel_fun(obj.conv,dEa,obj.T)
     print obj.sel,sel_pred
-    ax.plot(math.log(sel_pred*.01,10),math.log(obj.sel*.01,10),'o',color=get_color(obj.cat))
+    #xerr=math.log((-sel_pred+sel_fun(obj.conv,dEa-sigma,obj.T))*0.01,10)
+    xerr=0
+    ax.errorbar(math.log(sel_pred*.01,10),math.log(obj.sel*.01,10),xerr=xerr,marker='o',label=label,color=get_color(obj.category))
 
 ax.plot(np.arange(-6,1,1),np.arange(-6,1,1))
 ax.set_title(r'$\Delta E^a_{theory} = %4.2f$'%(dEa_theory))
-ax.set_ylim([-1,0])
-ax.set_xlim([-1,0])
+ax.set_ylim([-3,0])
+ax.set_xlim([-3,0])
 ax.set_ylabel('Experimental log(Selectivity)')
 ax.set_xlabel('Model log(Selectivity)')
+ax.legend(loc='best',fontsize=9)
 plt.savefig('parity-dEa-%4.2f.pdf'%(dEa_theory))

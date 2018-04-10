@@ -6,6 +6,7 @@ import pickle
 from scipy.stats import norm
 from PointParameters import get_color
 import pylab
+import math
 
 #Load DFT object
 dco = pickle.load(open('dftobj.pkl','rb'))
@@ -57,6 +58,10 @@ ax = fig.add_subplot(111)
 
 p,C_p = np.polyfit(Ts,avg_dGcs,1,cov=True)
 m,b=p
+
+p,C_p = np.polyfit(Ts,avg_dGcs,1,cov=True)
+m,b=p
+
 print "slope, intercept: ",m,b
 print "Variance matrix: ", C_p
 print "ZPEs: ",avg_dZPEs
@@ -67,11 +72,11 @@ print "avg -dST+dCv",avg_ndST+avg_dCvs
 dEa=0.55
 
 # Plot dGcor vs T
-ax.plot(Ts, avg_dGcs+dEa, 'g', linewidth=4,label=r'$\Delta G^a (real)$')
-ax.plot(Ts, m*Ts+b+dEa, 'k', linewidth=2,label=r'$\Delta G^a \approx \Delta E^a %.3e \cdot T  %4.4f$'%(m,b),alpha=0.5)
-ax.plot(Ts, avg_dGcs+dEa+mu_stds[:,1]+0.08, 'g',linestyle= '--',linewidth=2) #std dev
-ax.plot(Ts, avg_dGcs+dEa-mu_stds[:,1]-0.08, 'g',linestyle= '--',linewidth=2) #std dev
 ax.fill_between(Ts,avg_dGcs+dEa-mu_stds[:,1]-0.08,avg_dGcs+dEa+mu_stds[:,1]+0.08,color='green',alpha=0.2)
+ax.plot(Ts, avg_dGcs+dEa, 'g', linewidth=2,label=r'$\Delta G^a (real)$')
+ax.plot(Ts, m*Ts+b+dEa, 'k', linestyle='--', linewidth=2,label=r'$\Delta E^a %.3e \cdot T  %4.4f$'%(m,b),alpha=1)
+#ax.plot(Ts, avg_dGcs+dEa+mu_stds[:,1]+0.08, 'g',linestyle= '--',linewidth=2) #std dev
+#ax.plot(Ts, avg_dGcs+dEa-mu_stds[:,1]-0.08, 'g',linestyle= '--',linewidth=2) #std dev
 ax.plot(Ts, avg_dZPEs, 'b', linewidth=2,label=r'$\Delta E_{ZPE}^a$',alpha=0.5)
 ax.axhline( dEa, color='orange', linewidth=2,label=r'$\Delta E^a$',alpha=0.5)
 ax.plot(Ts, avg_ndST, 'c', linewidth=2,label=r'$T \Delta S^a$',alpha=0.5)
@@ -95,8 +100,14 @@ def sel_fun(conv_vec,T,dGcorr_vec,dEa):
     sel = (1-conv_vec-(1-conv_vec)**(k2_k1))/(conv_vec*(k2_k1-1))*100
     return sel
 
-ax.plot(Ts,sel_fun(1e-5,Ts,avg_dGcs,0.55),label='dGcorr ~ real')
-ax.plot(Ts,sel_fun(1e-5,Ts,(m*Ts+b),0.55),label='dGcorr ~ linear fit')
-ax.plot(Ts,sel_fun(1e-5,Ts,(avg_dZPEs-avg_dSs*Ts),0.55),label='dGcorr ~ cst entropy+ZPE')
-ax.legend()
+conv_vec = np.logspace(-7,-.01,num=5,base=10)
+clrs = ['b','r','g','m','c']
+
+for conv,clr in zip(conv_vec,clrs):
+    ax.plot(Ts,sel_fun(conv,Ts,avg_dGcs,0.55),color=clr,linestyle='-',label='Real; log(X)= %4.2f'%(math.log(conv,10)))
+    ax.plot(Ts,sel_fun(conv,Ts,(m*Ts+b),0.55),color='k',linestyle='--',label='Linear fit')
+    #ax.plot(Ts,sel_fun(conv,Ts,(avg_dZPEs-avg_dSs*Ts),0.55),label='dGcorr ~ cst entropy+ZPE')
+ax.legend(loc='best')
+ax.set_ylabel('Selectivity')
+ax.set_xlabel('log(Conversion)')
 plt.savefig('k2k1_T.pdf')

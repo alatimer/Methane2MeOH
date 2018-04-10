@@ -71,7 +71,8 @@ class expclass:
             catalysis='heterogeneous',
             single_site = 'no',
             DOI = 'None', 
-            tag=''):
+            category='None',
+            tag='',):
         self.cat = cat
         self.cattype = cattype
         self.T = T
@@ -83,6 +84,7 @@ class expclass:
         self.oxidant = oxidant
         self.catalysis = catalysis
         self.single_site = single_site
+        self.category = category
         self.tag = tag
         self.DOI = DOI
         self.dEa = None
