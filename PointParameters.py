@@ -20,34 +20,34 @@ clrs_dict = {
     'Rh':'lightskyblue',
     'Au-Pd':'palegoldenrod',
     'Gas-Phase(Radical)':'grey',
-
-    'Rutile(110)':'firebrick',
-    'Metal(111)':'goldenrod',
-    'Graphene':'pink',
-    'Boron-nitride':'forestgreen',
+    
     'CHA-MO':'lightgreen',
     'CHA-MOH':'m',
     'SAPO-34-MO':'lightskyblue',
     'CHA-MOM':'indianred',
     'MOR-MOM':'grey',
-    'Porphyrin':'cyan',
-
-    #Exp categories
-    'Oxide':'lightgreen',
-    'Au-Pd':'blanchedalmond',
-    'Phthalocyanine':'cyan',
+    
     'Phthalocyanine/zeolite':'cyan',
     'ZSM-5':'forestgreen',
     'SSZ-13':'indianred',
     'MOR':'powderblue',
-    'Zeolite':'crimson',
-    'Phosphate':'goldenrod',
     'Phosphate/zeolite':'darkred',
+
+    #Final color morphology categories
+    'Oxide':'firebrick',
+    'Au-Pd':'goldenrod',
+    'Phthalocyanine':'cyan',
+    'Phosphate':'lightcoral',
     'Silicalite':'pink',
     'Sodalite':'plum',
     'Gas-phase':'white',
-
-    
+    'Zeolite':'forestgreen',
+    'Rutile(110)':'firebrick',
+    'Metal(111)':'goldenrod',
+    'Graphene':'powderblue',
+    'Boron-nitride':'plum',
+    'Porphyrin':'cyan',
+   
     }
 
 shape_dict = {
