@@ -31,12 +31,19 @@ conv_vec = np.logspace(-8,-.01,num=1e2,base=10)
 Ts = np.arange(275,900,50)
 
 def sel_fun(conv,dEa,T,error=None):
+    m_err = 8.744e-05 
+    b_err = 0.0886
+    dGa = dEa - 4.191e-4*T - 0.0152
     if error==None:
-        dGa = dEa - 4.191e-4*T - 0.0152
-    elif error=='+':
-        dGa=0
+        print 'T, dGa : ',T,dGa
+    if error=='+':
+        #dGa+=0.07
+        dGa+=(m_err*T+b_err)
+        print "upper bound: ",dGa
     elif error=='-':
-        dGa=0
+        #dGa-=0.07
+        dGa-=(m_err*T+b_err)
+        print "lower bound:", dGa
     k2_k1 = math.exp(dGa/kB/T)
     sel = (1-conv-(1-conv)**(k2_k1))/(conv*(k2_k1-1))*100
     return sel #in percent
@@ -55,7 +62,7 @@ for T in Ts:
             dEa = dEa_theory
         plt.cla()
         ax.plot(np.log10(conv_vec),sel_fun(conv_vec,dEa,T))
-        ax.plot(np.log10(conv_vec),sel_fun(conv_vec,dEa,T,error='+'))
+        ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa,T,error='-'),sel_fun(conv_vec,dEa,T,error='+'),alpha=0.2)
         count = 0
         for cat in expclassesobj.data:
             if cat.T >= T-25 and cat.T<=T+25 and cat.rxntype == condn:

@@ -16,6 +16,7 @@ vib_dco = dco.filter(lambda x: x.vibs_ch4 !=None)
 #Conditions at which to evaluate dGcorr
 P = 101325
 Ts=np.arange(200,1000,10)
+dEa=0.55
 
 avg_dGcs = []
 avg_dZPEs = []
@@ -59,8 +60,10 @@ ax = fig.add_subplot(111)
 p,C_p = np.polyfit(Ts,avg_dGcs,1,cov=True)
 m,b=p
 
-p,C_p = np.polyfit(Ts,avg_dGcs,1,cov=True)
-m,b=p
+per,C_per = np.polyfit(Ts,mu_stds[:,1]+0.08,1,cov=True)
+mer,ber=per
+print "ERROR:slope, intercept: ",mer,ber
+print "ERROR: Variance matrix: ", C_per
 
 print "slope, intercept: ",m,b
 print "Variance matrix: ", C_p
@@ -69,7 +72,6 @@ print "avg_dSs: ",avg_dSs
 print "avg_dCvs: ",avg_dCvs
 print "avg -dST+dCv",avg_ndST+avg_dCvs
 
-dEa=0.55
 
 # Plot dGcor vs T
 ax.fill_between(Ts,avg_dGcs+dEa-mu_stds[:,1]-0.08,avg_dGcs+dEa+mu_stds[:,1]+0.08,color='green',alpha=0.2)
