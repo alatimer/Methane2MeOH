@@ -283,6 +283,8 @@ for cat in dftclasses_obj.data:
         cat.cattype='Rutile(110)'
     if cat.cattype == 'porphyrin':
         cat.cattype='Porphyrin'
+    if any(zeol in cat.cattype for zeol in ['CHA','MOR']):
+        cat.cattype='Zeolite'
 
 ### make pickle file
 pickle.dump( dftclasses_obj, open( "dftobj.pkl", "wb" ) )

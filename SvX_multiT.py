@@ -7,6 +7,7 @@ from ase.units import kB
 import numpy as np
 from selclass import selclass
 from PointParameters import get_color,get_shape
+from Selectivity import plot_sel
 
 ##### load exp data #########
 expclassesobj = pickle.load(open('expobj.pkl','rb'))
@@ -61,8 +62,12 @@ for T in Ts:
         else:
             dEa = dEa_theory
         plt.cla()
-        ax.plot(np.log10(conv_vec),sel_fun(conv_vec,dEa,T))
-        ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa,T,error='-'),sel_fun(conv_vec,dEa,T,error='+'),alpha=0.2)
+
+        plot_sel(ax,conv_vec,dEa,T,T_low=T-25,T_hi=T+25,facecolor='c',color='c')
+        #ax.plot(np.log10(conv_vec),sel_fun(conv_vec,dEa,T))
+        #ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa,T,error='-'),sel_fun(conv_vec,dEa,T,error='+'),alpha=0.2)
+        #V old error V
+        #ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa+sigma,T),sel_fun(conv_vec,dEa-sigma,T),alpha=0.2)
         count = 0
         for cat in expclassesobj.data:
             if cat.T >= T-25 and cat.T<=T+25 and cat.rxntype == condn:

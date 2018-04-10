@@ -40,7 +40,7 @@ clrs_dict = {
     'ZSM-5':'forestgreen',
     'SSZ-13':'indianred',
     'MOR':'powderblue',
-    'Zeolite(Generic)':'crimson',
+    'Zeolite':'crimson',
     'Phosphate':'goldenrod',
     'Phosphate/zeolite':'darkred',
     'Silicalite':'pink',

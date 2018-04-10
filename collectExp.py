@@ -40,8 +40,8 @@ for obj in expclasses_obj.data:
         obj.category = obj.category.split('/')[0]
     if obj.cat == '-':
         obj.cat = 'Gas-Phase(Radical)'
-    if obj.category=='Zeolite':
-        obj.category = 'Zeolite(Generic)'
+    if obj.category in ['Zeolite','ZSM-5','MOR','SSZ-13']:
+        obj.category = 'Zeolite'
 
 
 ### make pickle file
