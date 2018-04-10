@@ -11,17 +11,21 @@ dco = pickle.load(open('dftobj.pkl','rb'))
 
 #Filter out calculations that do not have vibrational analysis
 dco = dco.filter(lambda x: x.vibs_ch4 !=None)
+dco = dco.filter(lambda x: x.vibs_ch3oh !=None)
+#dco = dco.filter(lambda x: x.ets_ch3oh !=None)
 
 #Conditions at which to evaluate dGcorr
 P = 101325
-T=500
+T=900
 
 nbins=5
 
 dGcorr_list = []
 dGcorr_dict={}
 for cat in dco.data:
-    dGcorr = cat.get_dGcorr(T,P)
+    #dGcorr =  -T*cat.get_dS(T) + cat.ets_ch4 - cat.ets_ch3oh
+    #dGcorr =  cat.get_dZPE() #+ cat.ets_ch4 - cat.ets_ch3oh
+    dGcorr = cat.ets_ch4 - cat.ets_ch3oh + cat.get_dGcorr(T,P) 
     dGcorr_list.append(dGcorr)
     print cat.cat, cat.cattype
     if cat.cattype in dGcorr_dict.keys():
@@ -34,7 +38,8 @@ for cat in dco.data:
  
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.set_xlim(-.75,0.25)
+#ax.set_xlim(-.75,0.25)
+ax.set_xlim(-.5,1.0)
 
 dGcorr_multi = []
 labels=[]

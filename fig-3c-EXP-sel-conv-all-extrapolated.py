@@ -7,6 +7,7 @@ from ase.units import kB
 import numpy as np
 from selclass import selclass
 from PointParameters import get_color,get_shape
+from Selectivity import plot_sel
 
 ### load DFT data ######3
 # For performance, can just use vibrations from Ni-BN since it is ~ average
@@ -37,8 +38,9 @@ ax = fig.add_subplot(111)
 
 #### Plot Model selectivity ####
 conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
-selobj = selclass(conv_vec,dftobj,color='k')
-selobj.fun_err(ax,err,dEa_guess,T_fix,P)
+#selobj = selclass(conv_vec,dftobj,color='k')
+#selobj.fun_err(ax,err,dEa_guess,T_fix,P)
+plot_sel(ax,conv_vec,0.55,T_fix,facecolor='k',color='k')
 
 #### Experimental points #####
 labels=[]

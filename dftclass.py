@@ -229,7 +229,8 @@ class dftclass:
         Gcorr_ch4 = gibbs.get_helmholtz_energy(T,verbose=False)
         gibbs = self.get_ads_Gcorr(self.vibs_ch3oh) 
         Gcorr_ch3oh = gibbs.get_helmholtz_energy(T,verbose=False)
-
+        
+        #P=101325 #P doesn't matter, will cancel by subtraction of two ideal gases
         gibbs = self.get_gas_Gcorr(self.atoms_ch4g,self.vibs_ch4g,12,0,'nonlinear')                
         Gcorr_ch4g = gibbs.get_gibbs_energy(T,P,verbose=False)
         gibbs = self.get_gas_Gcorr(self.atoms_ch3ohg,self.vibs_ch3ohg,1,0,'nonlinear')

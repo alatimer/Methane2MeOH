@@ -41,8 +41,8 @@ classes_idx = set()
 shape_handles=[]
 clr_handles=[]
 for cat in catlistobj.data:
-    labeler = cat.cat
-    marker = get_shape(cat.cattype)
+    labeler = cat.cattype
+    marker = 'o'#get_shape(cat.cattype)
     #cattype = cat.cattype
     #if 'HSE' in cat.tag:
     #    labeler+='-HSE'
