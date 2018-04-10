@@ -14,8 +14,8 @@ dco = pickle.load(open('dftobj.pkl','rb'))
 vib_dco = dco.filter(lambda x: x.vibs_ch4 !=None)
 
 #Conditions at which to evaluate dGcorr
-P = 101325
-Ts=np.arange(200,1000,10)
+P = 101325 #doesnt affect results, dummy P
+Ts=np.arange(200,1000,100)
 dEa=0.55
 
 avg_dGcs = []
@@ -23,70 +23,69 @@ avg_dZPEs = []
 avg_dSs = []
 avg_dCvs = []
 mu_stds = []
-for T in Ts: 
-    dGcorr_list = []
-    dZPE_list = []
-    dS_list = []
-    dCv_list = []
-    for cat in vib_dco.data:
-        dGcorr = cat.get_dGcorr(T,P)
-        dZPE = cat.get_dZPE()
-        dCv = cat.get_dC(T)
-        dCv_list.append(dCv)
-        dS = cat.get_dS(T)
-        dGcorr_list.append(dGcorr)
-        dZPE_list.append(dZPE)
-        dS_list.append(dS)
-    mu,std = norm.fit(dGcorr_list)
-    mu_stds.append([mu,std])
-    avg_dGc = np.mean(np.array(dGcorr_list))
-    avg_dGcs.append(avg_dGc)
-    avg_dZPE = np.mean(np.array(dZPE_list))
-    avg_dZPEs.append(avg_dZPE)
-    avg_dS = np.mean(np.array(dS_list))
-    avg_dSs.append(avg_dS)
-    avg_dCv = np.mean(np.array(dCv_list))
-    avg_dCvs.append(avg_dCv)
 
-avg_dZPEs = np.array(avg_dZPEs)
-mu_stds = np.array(mu_stds)
-avg_dGcs = np.array(avg_dGcs)
-avg_dCvs = np.array(avg_dCvs)
-avg_ndST =  avg_dSs*Ts*-1.0
+dmT = {}
+dmT['dZPE'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+dmT['dS'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+dmT['dCv'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+dmT['dGc'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+dmT['dG'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+dmT['nTdS'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+dmT['dE'] = np.zeros((Ts.shape[0],len(vib_dco.data)))
+print dmT
+for i,T in enumerate(Ts): 
+    for j,cat in enumerate(vib_dco.data):
+        dmT['dGc'][i][j] = cat.get_dGcorr(T,P)
+        dmT['dZPE'][i][j] = cat.get_dZPE()
+        dmT['dS'][i][j] = cat.get_dS(T)
+        dmT['nTdS'][i][j] = -T*cat.get_dS(T)
+        dmT['dCv'][i][j] = cat.get_dC(T)
+        dmT['dG'][i][j] = cat.get_dGcorr(T,P)+cat.ets_ch4-cat.ets_ch3oh
+        dmT['dE'][i][j] = cat.ets_ch4-cat.ets_ch3oh
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
-p,C_p = np.polyfit(Ts,avg_dGcs,1,cov=True)
+
+
+labels= {'dZPE':r'$\Delta E_{ZPE}^a$',
+         'dS':r'$ \Delta S^a$',
+         'nTdS':r'$-T \Delta S^a$',
+         'dGc':r'$\Delta G^a_{corr}$',
+         'dG':r'$\Delta G^a (real)$',
+         'dCv':r'$\int_{0}^{T} \Delta C_v^a dT$',
+         'dE':r'$\Delta E^a$',
+         }
+colors = ['b','c','r','m','green','pink','lightgreen']
+for i,dX in enumerate(dmT.keys()):
+    if dX in ['dS','dGc']:
+        continue
+    avg_vT = np.mean(dmT[dX],axis=1)
+    std_vT = np.std(dmT[dX],axis=1)
+    ax.fill_between(Ts,avg_vT+std_vT,avg_vT-std_vT,color=colors[i],alpha=0.2)
+    ax.plot(Ts, avg_vT, linewidth=2,label=labels[dX],color=colors[i])
+
+p,C_p = np.polyfit(Ts,np.mean(dmT['dGc'],axis=1),1,cov=True)
 m,b=p
-
-per,C_per = np.polyfit(Ts,mu_stds[:,1]+0.08,1,cov=True)
+print "dGc linear fit: ",m,b
+per,C_per = np.polyfit(Ts,np.std(dmT['dG'],axis=1),1,cov=True)
 mer,ber=per
-print "ERROR:slope, intercept: ",mer,ber
-print "ERROR: Variance matrix: ", C_per
-
-print "slope, intercept: ",m,b
-print "Variance matrix: ", C_p
-print "ZPEs: ",avg_dZPEs
-print "avg_dSs: ",avg_dSs
-print "avg_dCvs: ",avg_dCvs
-print "avg -dST+dCv",avg_ndST+avg_dCvs
-
+print "dG 1sigma linear fit: ",mer,ber
 
 # Plot dGcor vs T
-ax.fill_between(Ts,avg_dGcs+dEa-mu_stds[:,1]-0.08,avg_dGcs+dEa+mu_stds[:,1]+0.08,color='green',alpha=0.2)
-ax.plot(Ts, avg_dGcs+dEa, 'g', linewidth=2,label=r'$\Delta G^a (real)$')
-ax.plot(Ts, m*Ts+b+dEa, 'k', linestyle='--', linewidth=2,label=r'$\Delta E^a %.3e \cdot T  %4.4f$'%(m,b),alpha=1)
+#ax.fill_between(Ts,avg_dGcs+dEa-mu_stds[:,1]-0.08,avg_dGcs+dEa+mu_stds[:,1]+0.08,color='green',alpha=0.2)
+ax.plot(Ts, m*Ts+b, 'k',linestyle='--', linewidth=2,label=r'$%.3e \cdot T +  %4.4f$'%(m,b))
+ax.plot(Ts, (m-mer)*Ts+(b-ber), 'grey',linestyle='--', linewidth=2,label=r'$\Delta G^a + %.3e \cdot T + %4.4f$'%(mer,ber))
+ax.plot(Ts, (m+mer)*Ts+(b+ber), 'grey',linestyle='--', linewidth=2,label=None)
+#ax.plot(Ts, m*Ts+b+dEa, 'k', linestyle='--', linewidth=2,label=r'$\Delta E^a %.3e \cdot T  %4.4f$'%(m,b),alpha=1)
 #ax.plot(Ts, avg_dGcs+dEa+mu_stds[:,1]+0.08, 'g',linestyle= '--',linewidth=2) #std dev
 #ax.plot(Ts, avg_dGcs+dEa-mu_stds[:,1]-0.08, 'g',linestyle= '--',linewidth=2) #std dev
-ax.plot(Ts, avg_dZPEs, 'b', linewidth=2,label=r'$\Delta E_{ZPE}^a$',alpha=0.5)
-ax.axhline( dEa, color='orange', linewidth=2,label=r'$\Delta E^a$',alpha=0.5)
-ax.plot(Ts, avg_ndST, 'c', linewidth=2,label=r'$T \Delta S^a$',alpha=0.5)
-ax.plot(Ts, avg_dCvs, 'r', linewidth=2,label=r'$\int_{0}^{T} \Delta C_v^a dT$',alpha=0.5)
+#ax.plot(Ts, avg_dZPEs, 'b', linewidth=2,label=r'$\Delta E_{ZPE}^a$',alpha=0.5)
+#ax.axhline( dEa, color='orange', linewidth=2,label=r'$\Delta E^a$',alpha=0.5)
+#ax.plot(Ts, avg_ndST, 'c', linewidth=2,label=r'$T \Delta S^a$',alpha=0.5)
+#ax.plot(Ts, avg_dCvs, 'r', linewidth=2,label=r'$\int_{0}^{T} \Delta C_v^a dT$',alpha=0.5)
 #ax.plot(Ts, avg_dCvs+avg_dZPEs+avg_ndST, 'm', linewidth=2,label='all')
 #ax.text(500,-0.5,r'$\Delta G^a \approx %.3e \cdot T  %4.4f$'%(m,b))
-#title = r"Fit results: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std)
-#plt.title(title)
 ax.set_ylim(-1,0.75)
 ax.set_xlim(250,900)
 plt.ylabel(r'$\Delta G^a$ (eV)')
@@ -105,6 +104,7 @@ def sel_fun(conv_vec,T,dGcorr_vec,dEa):
 conv_vec = np.logspace(-7,-.01,num=5,base=10)
 clrs = ['b','r','g','m','c']
 
+'''
 for conv,clr in zip(conv_vec,clrs):
     ax.plot(Ts,sel_fun(conv,Ts,avg_dGcs,0.55),color=clr,linestyle='-',label='Real; log(X)= %4.2f'%(math.log(conv,10)))
     ax.plot(Ts,sel_fun(conv,Ts,(m*Ts+b),0.55),color='k',linestyle='--',label='Linear fit')
@@ -113,3 +113,4 @@ ax.legend(loc='best')
 ax.set_ylabel('Selectivity')
 ax.set_xlabel('log(Conversion)')
 plt.savefig('k2k1_T.pdf')
+'''
