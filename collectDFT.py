@@ -23,7 +23,17 @@ def reader(file_name, dftclasses_obj):
             ets_ch4 = float(vals[labels.index('ets_ch4')])
             ets_ch3oh = float(vals[labels.index('ets_ch3oh')])
             tag = vals[labels.index('tag')]
-            cat_object = dftclass(cat, cattype, ets_ch4=ets_ch4, ets_ch3oh=ets_ch3oh, tag=tag)
+            #Some calculations are read partially from input file and partially from directories, ie ambar's
+            dco = dftclasses_obj.filter(lambda x: x.cat == cat)
+            dco = dco.filter(lambda x: x.cattype == cattype)
+            if len(dco.data)>0 and 'HSE' not in tag:
+                thiscat=dco.data[0]
+                cat_object = dftclass(cat, cattype, ets_ch4=ets_ch4, ets_ch3oh=ets_ch3oh, 
+                        vibloc_ch3oh=thiscat.vibloc_ch3oh,vibloc_ch4=thiscat.vibloc_ch4,tag=thiscat.tag,
+                        vibloc_ch3ohg=thiscat.vibloc_ch3ohg,vibloc_ch4g=thiscat.vibloc_ch4g)
+                dftclasses_obj.data.remove(thiscat)
+            else:
+                cat_object = dftclass(cat, cattype, ets_ch4=ets_ch4, ets_ch3oh=ets_ch3oh, tag=tag)
             dftclasses_obj.data.append(cat_object)
     return dftclasses_obj
 
@@ -283,7 +293,7 @@ for cat in dftclasses_obj.data:
         cat.cattype='Rutile(110)'
     if cat.cattype == 'porphyrin':
         cat.cattype='Porphyrin'
-    if any(zeol in cat.cattype for zeol in ['CHA','MOR']):
+    if any(zeol in cat.cattype for zeol in ['CHA','MOR','SAPO']):
         cat.cattype='Zeolite'
 
 ### make pickle file
@@ -291,7 +301,4 @@ pickle.dump( dftclasses_obj, open( "dftobj.pkl", "wb" ) )
 dco = pickle.load(open('dftobj.pkl','rb'))
 
 for cat in dco.data:
-    print cat.cat,cat.cattype,cat.vibs_ch4,cat.ets_ch4,cat.beef_ets_ch4
-    if cat.vibs_ch4!=None:
-        dGcorr = cat.get_dGcorr(423,101325)
-        print dGcorr
+    print cat.cat,cat.cattype,cat.vibs_ch4,cat.vibs_ch3oh,cat.ets_ch4,cat.ets_ch3oh,cat.tag
