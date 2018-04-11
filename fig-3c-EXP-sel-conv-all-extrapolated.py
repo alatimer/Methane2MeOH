@@ -5,16 +5,8 @@ import matplotlib.pyplot as plt
 import math
 from ase.units import kB
 import numpy as np
-from selclass import selclass
 from PointParameters import get_color,get_shape
-from Selectivity import plot_sel
-
-### load DFT data ######3
-# For performance, can just use vibrations from Ni-BN since it is ~ average
-dftobj = pickle.load(open('dftobj.pkl','rb'))
-dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
-dftobj = dftobj.filter(lambda x: x.cat=='Ni')
-dftobj = dftobj.filter(lambda x: x.cattype=='Boron-nitride')
+from Selectivity import plot_sel,sel_fun
 
 ##### load exp data #########
 expclassesobj = pickle.load(open('expobj.pkl','rb'))
@@ -29,8 +21,6 @@ solv_corr=0.22
 dEa_guess=0.55
 T_fix=700
 P = 101325
-dGcorr = -4.191e-4*T_fix-0.0152 #dftobj.fun_dGcorr(T_fix,101325)
-err = 0.07
 
 size=(8,6)
 fig = plt.figure(1,figsize=size)
@@ -38,11 +28,9 @@ ax = fig.add_subplot(111)
 
 #### Plot Model selectivity ####
 conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
-#selobj = selclass(conv_vec,dftobj,color='k')
-#selobj.fun_err(ax,err,dEa_guess,T_fix,P)
 plot_sel(ax,conv_vec,0.55,T_fix,facecolor='k',color='k')
 
-#### Experimental points #####
+#### Plot Experimental points #####
 labels=[]
 for cat in expclassesobj.data:
     label = '%s-%s, %s'%(cat.cat,cat.cattype,cat.author)
@@ -53,10 +41,12 @@ for cat in expclassesobj.data:
         label = None
     else:
         labels.append(label)
-    cat.get_dEa(dEa_guess,cat.T,dftobj,solv_corr=solv_corr)
-    #extrapolate selectivity
-    modelsel = cat.sel_fun(T_fix,P,dftobj) #rethink, plots model
+
+    #assign cat object a dEa
+    cat.get_dEa(dEa_guess,cat.T,solv_corr=solv_corr)
+    
     #plot experimental data with extrapolated selectivity
+    modelsel = sel_fun(cat.conv,T_fix,dEa=cat.dEa,dGa=None,error=None)
     ax.plot(cat.log_conv,
             modelsel,
             color=get_color(cat.category),
@@ -65,8 +55,6 @@ for cat in expclassesobj.data:
             fillstyle='full',
             markersize=10,
             clip_on=False)
-
-
 
 ax.legend(loc=3,fontsize=15)
 ax.set_xlabel(r'log(CH$_4$ conversion)')

@@ -45,9 +45,9 @@ for cat in expclassesobj.data:
         label = None
     else:
         labels.append(label)
-    dEa = cat.get_dEa(dEa_guess,cat.T,dftobj,solv_corr=0)
+    dEa = cat.get_dEa(dEa_guess,cat.T,solv_corr=0)
     #extrapolate selectivity
-    modelsel = cat.sel_fun(T_fix,P,dftobj) #rethink, plots model
+    modelsel = cat.sel_fun(T_fix) #rethink, plots model
     print modelsel
     #plot experimental data with extrapolated selectivity
     ax.plot(cat.log_conv,

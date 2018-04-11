@@ -8,12 +8,13 @@ from scipy.optimize import minimize
 from scipy.stats import norm
 from ase.units import kB,_hplanck
 from selclass import selclass
+from Selectivity import plot_sel,sel_fun
+from PointParameters import get_color
 
 ##### PARAMETERS ######
 sigma = 0.07
 err = sigma #change for desired uncertainty percentage
 dEa = 0.55
-solv_corr = 0.22
 P=101325
 
 ### INITIALIZE PLOT #####
@@ -47,22 +48,25 @@ for cond in condns:
     T_hi = condns[cond]['T'][1]
     T_av = np.array(condns[cond]['T']).mean()
     clr = condns[cond]['color']
-    solv_corr = condns[cond]['solv_corr']
     selobj = selclass(conv_vec,dftobj,color=clr)
     dGa=condns[cond]['dGa']
     sel_vec = selobj.sel_fun(dEa,T_av,P,dGa=dGa)
-    ax.plot(np.log10(conv_vec),sel_vec,color=clr)
+    print dGa,T_av
+    #ax.plot(np.log10(conv_vec),sel_vec,color=clr)
+    ax.plot(np.log10(conv_vec),sel_fun(conv_vec,T_av,dGa),color=clr)
+    #plot_sel(ax,conv_vec,0.55,T_av,T_low=None,T_hi=None,error=True,facecolor='w',color='g')
 
 ######## Plot EXPERIMENTAL DATA ######
 labels=[]
 for pt in catlistobj.data:
+
     #label = '%s-%s, %s'%(pt.cat,pt.cattype,pt.author)
     label = pt.cat
     if label in labels:
         label = None
     else:
         labels.append(label)
-    ax.plot(pt.log_conv,pt.sel,'o',color=pt.clr,marker='o',label=label,fillstyle=pt.fill,markersize=ptsize,clip_on=False)
+    ax.plot(pt.log_conv,pt.sel,'o',color=get_color(pt.category),marker='o',label=label,markersize=ptsize,clip_on=False)
     ax.text(pt.log_conv,pt.sel,str(pt.T),fontsize=7,ha='center',va='center',color='k')
 
 ###### PLOT PARAMETERS #####
@@ -72,4 +76,4 @@ ax.set_ylim(0,100)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')
 plt.tight_layout()
-plt.savefig('fig-sel-conv.pdf')
+plt.savefig('fig-8-MMO.pdf')

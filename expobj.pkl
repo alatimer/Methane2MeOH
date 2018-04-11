@@ -12454,7 +12454,7 @@ expclass
 p3396
 (dp3397
 g6
-S'MMO'
+S'MMO-opt'
 p3398
 sg8
 S'MMO'
@@ -12497,7 +12497,7 @@ expclass
 p3408
 (dp3409
 g6
-S'MMO'
+S'MMO-opt'
 p3410
 sg8
 S'MMO'
@@ -12540,7 +12540,7 @@ expclass
 p3420
 (dp3421
 g6
-S'MMO'
+S'MMO-opt'
 p3422
 sg8
 S'MMO'
@@ -12583,7 +12583,7 @@ expclass
 p3432
 (dp3433
 g6
-S'MMO'
+S'MMO-opt'
 p3434
 sg8
 S'MMO'
@@ -12626,7 +12626,7 @@ expclass
 p3444
 (dp3445
 g6
-S'MMO'
+S'MMO-opt'
 p3446
 sg8
 S'MMO'

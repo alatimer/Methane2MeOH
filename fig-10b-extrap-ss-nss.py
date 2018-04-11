@@ -6,13 +6,7 @@ import math
 from ase.units import kB
 import numpy as np
 from selclass import selclass
-
-### load DFT data ######3
-# For performance, can just use vibrations from Ni-BN since it is ~ average
-dftobj = pickle.load(open('dftobj.pkl','rb'))
-dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
-dftobj = dftobj.filter(lambda x: x.cat=='Ni')
-dftobj = dftobj.filter(lambda x: x.cattype=='BN')
+from Selectivity import sel_fun,plot_sel
 
 ##### load exp data #########
 expclassesobj = pickle.load(open('expobj.pkl','rb'))
@@ -27,8 +21,6 @@ solv_corr=0.22
 dEa_guess=0.55
 T_fix=700
 P = 101325
-dGcorr = dftobj.fun_dGcorr(T_fix,101325)
-err = 0.07
 
 size=(8,6)
 fig = plt.figure(1,figsize=size)
@@ -37,8 +29,6 @@ ax = fig.add_subplot(111)
 #### Experimental points #####
 labels=[]
 for cat in expclassesobj.data:
-    #label = '%s-%s, %s'%(cat.cat,cat.cattype,cat.author)
-    #label = '%s'%(cat.cat)
     if cat.single_site=='yes':
         clr='grey'
         label="single site"
@@ -49,24 +39,22 @@ for cat in expclassesobj.data:
         label = None
     else:
         labels.append(label)
-    cat.get_dEa(dEa_guess,cat.T,dftobj,solv_corr=solv_corr)
+    cat.get_dEa(dEa_guess,cat.T,solv_corr=solv_corr)
     #extrapolate selectivity
-    modelsel = cat.sel_fun(T_fix,P,dftobj) #rethink, plots model
+    modelsel = cat.sel_fun(T_fix) 
     #plot experimental data with extrapolated selectivity
-
     ax.plot(cat.log_conv,
             modelsel,
             color=clr,
-            marker=cat.shape,
+            marker='o',
             label=label,
-            fillstyle=cat.fill,
+            fillstyle='full',
             markersize=10,
             clip_on=False)
 
 #### Plot Model selectivity ####
 conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
-selobj = selclass(conv_vec,dftobj,color='k')
-selobj.fun_err(ax,err,dEa_guess,T_fix,P)
+plot_sel(ax,conv_vec,0.55,T_fix,facecolor='k',color='k')
 
 ax.legend(loc=3,fontsize=10)
 ax.set_xlabel(r'log(CH$_4$ conversion)')

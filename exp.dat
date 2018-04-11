@@ -291,11 +291,11 @@ None    SSZ-13  Cu  623 -3.00   90.00   Leshkov gas O2  heterogeneous   yes thes
 10.1126/science.aan6515 -   Au-Pd   323 -3.05   84.38   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
 10.1126/science.aan6515 -   Au-Pd   323 -3.00   79.86   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
 10.1126/science.aan6515 -   Au-Pd   323 -2.93   77.56   Hutchings   aqueous H2O2/O2 heterogeneous   yes Radical Au-Pd
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.47   0.00    Mountfort   aqueous O2  homogeneous yes MMO MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.06   36.36   Mountfort   aqueous O2  homogeneous yes MMO MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.08   61.37   Mountfort   aqueous O2  homogeneous yes MMO MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.04   15.38   Mountfort   aqueous O2  homogeneous yes MMO MMO
-10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.47   0.00    Mountfort   aqueous O2  homogeneous yes MMO MMO
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.47   0.00    Mountfort   aqueous O2  homogeneous yes MMO MMO-opt
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.06   36.36   Mountfort   aqueous O2  homogeneous yes MMO MMO-opt
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.08   61.37   Mountfort   aqueous O2  homogeneous yes MMO MMO-opt
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -1.04   15.38   Mountfort   aqueous O2  homogeneous yes MMO MMO-opt
+10.1016/0141-0229(90)90162-J    MMO Fe  303 -0.47   0.00    Mountfort   aqueous O2  homogeneous yes MMO MMO-opt
 10.1038/nature24640 ZSM-5   Rh  423 -2.40   71.43   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5
 10.1038/nature24640 ZSM-5   Rh  423 -2.30   71.09   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5
 10.1038/nature24640 ZSM-5   Rh  423 -1.85   73.06   Shan    aqueous O2/CO   heterogeneous   yes None    ZSM-5

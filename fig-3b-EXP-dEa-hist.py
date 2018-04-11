@@ -18,39 +18,28 @@ normed=True
 expcolor='firebrick'
 theorycolor='k'
 
-
 catlistobj = pickle.load(open('expobj.pkl','rb'))
 #don't fit selectivites of 0 or 100 (rate), sigmoid is not well defined
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=0)
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=100)
-
 #Don't plot MMO enzyme points
 catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
-
 #Only plot data known to be single site catalysts
 catlistobj = catlistobj.classfilter(lambda x: x.single_site=='yes')
-
-#Can plot distributions for different active site types if desired
-#catlistobj = catlistobj.classfilter(lambda x: x.cat=='Fe')
-#catlistobj = catlistobj.classfilter(lambda x: x.cat=='Cu')
-
-#for dGcorr
-dftclassesobj = pickle.load(open('dftobj.pkl','rb'))
-dftclassesobj = dftclassesobj.filter(lambda x: x.vibs_ch4!=None)
-dftclassesobj = dftclassesobj.filter(lambda x: x.cat=='Ni')
-dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='Boron-nitride')
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
 
+######################        EXPERIMENTAL FITTING         #############################
+
 exp_dEa_list = []
+#Fit a dEa for every exp data point
 for pt in catlistobj.data:
-    pt.get_dEa(dEa_guess,pt.T,dftclassesobj,solv_corr=solv_corr)
+    pt.get_dEa(dEa_guess,pt.T,solv_corr=solv_corr)
     if verbose==True:
         print "Catalyst: %s ; exp dEa = %4.2f for S=%4.2f and X=%4.2f %4.2f"%(pt.cat+'-'+pt.cattype,pt.dEa,pt.sel,pt.log_conv,10**pt.log_conv)
     exp_dEa_list.append(pt.dEa)
 
-######################        EXPERIMENTAL FITTING         #############################
 dEa_multi = []
 labels = []
 colors = []
@@ -98,9 +87,6 @@ leg = Legend(ax,lines,['Experiment','Theory'],loc='upper right')
 ax.add_artist(leg);
 
 ax.text(0.05,5.2,r"Theory: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std),color=theorycolor)
-#title = r"Fit results: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std)
-#plt.title(title)
-
 
 plt.text(-0.105,-0.7,'(b)',fontsize=30)
 plt.ylabel(r'Counts')

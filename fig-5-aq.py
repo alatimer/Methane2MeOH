@@ -7,7 +7,6 @@ from expclass import *
 from scipy.optimize import minimize
 from scipy.stats import norm
 from ase.units import kB,_hplanck
-from selclass import selclass
 from PointParameters import get_color
 from Selectivity import plot_sel
 
@@ -27,10 +26,6 @@ ptsize = 15 #size of markers
 ### Conversion Vector ###
 conv_vec = np.logspace(-10,-.01,num=1e2,base=10)
 
-### Import DFT Data #######
-dftobj = pickle.load(open('dftobj.pkl','rb'))
-dftobj = dftobj.filter(lambda x: x.vibs_ch4!=None)
-
 ##### Import Exp Data ######
 catlistobj = pickle.load(open('expobj.pkl','rb'))
 catlistobj = catlistobj.classfilter(lambda x: x.single_site =='yes')
@@ -49,8 +44,6 @@ for cond in condns:
     T_av = np.array(condns[cond]['T']).mean()
     clr = condns[cond]['color']
     solv_corr = condns[cond]['solv_corr']
-    #selobj = selclass(conv_vec,dftobj,color=clr)
-    #selobj.fun_err(ax,plugerr,dEa-solv_corr,T_av,T_low=T_low,T_hi=T_hi)
     plot_sel(ax,conv_vec,dEa-solv_corr,T_av,T_low=T_low,T_hi=T_hi,facecolor=clr,color=clr)
 
 ######## Plot EXPERIMENTAL DATA ######

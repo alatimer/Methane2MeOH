@@ -3,10 +3,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.mlab as mlab
-#from analysis_functions import *
-#from catclass import *
 from scipy.stats import norm
 import pickle
+from PointParameters import get_color
 
 #mat_list = collect()
 #print len(mat_list)
@@ -14,8 +13,10 @@ import pickle
 dftobj = pickle.load(open('dftobj.pkl','rb'))
 #dftobj = dftobj.filter(lambda x: x.tag!='surface-stabilized')
 #dftobj = dftobj.filter(lambda x: 'HSE' not in x.tag)
-dftobj = dftobj.filter(lambda x: x.cat=='RuO2')
+dftobj = dftobj.filter(lambda x: x.cat=='Ru')
+dftobj = dftobj.filter(lambda x: x.cattype=='Rutile(110)')
 
+print len(dftobj.data)
 
 dEa_dict={}
 dEa_all = []
@@ -34,7 +35,7 @@ for mat in dftobj.data:
     else:
         dEa_dict[mclass] = {}
         dEa_dict[mclass]['dEas'] = [dEa]
-        dEa_dict[mclass]['clr'] = mat.color
+        dEa_dict[mclass]['clr'] = get_color(mat.cattype)
     for b_ch4,b_ch3oh in zip(mat.beef_ets_ch4,mat.beef_ets_ch3oh):
         dEa_dict[mclass]['dEas'].append(b_ch4-b_ch3oh)
         dEa_all.append(b_ch4-b_ch3oh)
@@ -79,7 +80,7 @@ plt.xlabel(r'$E^a_{CH_4}$ (eV)')
 plt.title(title)
 plt.tight_layout()
 plt.legend(fontsize=10)
-plt.savefig('fig-7b-beef-RuO2-ECH4.pdf')
+plt.savefig('fig-S7a-beef-RuO2-ECH4.pdf')
 
 plt.cla()
 n,bins,patches = plt.hist(Ea_ch3oh,nbins,normed=1,label=labels,color = colors,stacked=True)
@@ -96,5 +97,5 @@ plt.xlabel(r'$E^a_{CH_3OH}$ (eV)')
 plt.title(title)
 plt.tight_layout()
 plt.legend(fontsize=10)
-plt.savefig('fig-7c-beef-RuO2-ECH3OH.pdf')
+plt.savefig('fig-S7b-beef-RuO2-ECH3OH.pdf')
 

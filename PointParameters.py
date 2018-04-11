@@ -48,6 +48,8 @@ clrs_dict = {
     'Graphene':'powderblue',
     'Boron-nitride':'plum',
     'Porphyrin':'cyan',
+    'MMO':'green',
+    'MMO-opt':'firebrick',
    
     }
 

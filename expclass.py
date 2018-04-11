@@ -104,7 +104,7 @@ class expclass:
         '''
         return
    
-    def get_dEa(self,dEa_guess,T,dftclasses_object,solv_corr=0.22,P=101325):
+    def get_dEa(self,dEa_guess,T,solv_corr=0.22,P=101325):
         def sel_fun(conv_vec,dGa,T):
             k2_k1 = math.exp(dGa/kB/T)
             sel = (1-conv_vec-(1-conv_vec)**(k2_k1))/(conv_vec*(k2_k1-1))
@@ -128,8 +128,9 @@ class expclass:
         self.dEa = dEa
         return
     
-    def sel_fun(self,T,P,dftobj):
-        dGa = self.dEa + dftobj.fun_dGcorr(T,P)
+    def sel_fun(self,T):
+        dGa = self.dEa - 3.942e-4*T - 0.0289
+        #dGa = self.dEa + dftobj.fun_dGcorr(T,P)
         k2_k1 = math.exp(dGa/kB/T)
         sel = (1-self.conv-(1-self.conv)**(k2_k1))/(self.conv*(k2_k1-1))*100
         return sel #in percent
