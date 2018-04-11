@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import norm
 
-solv_corr=0.22#+0.09
-dEa_guess=0.56
+solv_corr=0.22
+dEa_guess=0.55
 kb = 0.0000862
 h = 4.14e-15
 verbose=True
@@ -16,40 +16,15 @@ normed=True
 
 catlistobj = pickle.load(open('expobj.pkl','rb'))
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=0)
-catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=100)
-catlistobj = catlistobj.classfilter(lambda x: x.cattype!='Zirconia')
-#catlistobj = catlistobj.classfilter(lambda x: x.rxntype=='gas')
+catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
 
-#catlistobj = catlistobj.classfilter(lambda x: x.cat=='Fe')
-#catlistobj = catlistobj.classfilter(lambda x: x.cat=='Cu')
-
-#for dGcorr
-dftclassesobj = pickle.load(open('dftobj.pkl','rb'))
-dftclassesobj = dftclassesobj.filter(lambda x: x.vibs_ch4!=None)
-dftclassesobj = dftclassesobj.filter(lambda x: x.cat=='Ni')
-dftclassesobj = dftclassesobj.filter(lambda x: x.cattype=='BN')
-clr_dict = {
-	'Fe':'firebrick',
-	'Cu':'goldenrod',
-	'Cu-Fe':'firebrick',
-	'Fe-MMO':'forestgreen',
-	'V':'blue',
-	'Mo':'m',
-	'Ga':'green',
-	'W':'orange',
-	'Co':'cyan',
-	'Ni':'pink',
-	'Rh':'lightskyblue',
-	'Au-Pd':'palegoldenrod',
-	}
-
-fig = plt.figure()
+fig = plt.figure(figsize=(5,4))
 ax = fig.add_subplot(111)
 
 exp_dEa_list = []
 for pt in catlistobj.data:
-    pt.get_dEa(dEa_guess,pt.T,dftclassesobj,solv_corr=solv_corr)
+    pt.get_dEa(dEa_guess,pt.T,solv_corr=solv_corr)
     if verbose==True:
         print "exp dEa = %4.2f for S=%4.2f and X=%4.2f %4.2f"%(pt.dEa,pt.sel,pt.log_conv,10**pt.log_conv)
     exp_dEa_list.append(pt.dEa)
@@ -67,10 +42,11 @@ for ss in dEa_dict:
 n,bins,patches = plt.hist(dEa_multi,nbins,label=labels,color=colors,stacked=True,normed=normed)#kwargs
 #plt.legend(fontsize=10)
 
+plt.text(0.1,-0.7,'(a)',fontsize=25)
 plt.ylabel(r'Counts')
-#plt.xlabel(r'$\Delta E^a$ (eV)')
-plt.xlabel(r'$E^a_{CH_4} - E^a_{CH_3OH}$ (eV)')
+plt.xlabel(r'$\Delta E^a_{exp}$ (eV)')
+#plt.xlabel(r'$E^a_{CH_4} - E^a_{CH_3OH}$ (eV)')
 #plt.xlim(0,1)
 plt.ylim(0,4)
 plt.tight_layout()
-plt.savefig('fig-exp-dEa-hist.pdf')
+plt.savefig('fig-9a-exp-dEa-hist-ALL.pdf')

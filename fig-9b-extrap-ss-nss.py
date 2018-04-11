@@ -22,7 +22,7 @@ dEa_guess=0.55
 T_fix=700
 P = 101325
 
-size=(8,6)
+size=(7,5)
 fig = plt.figure(1,figsize=size)
 ax = fig.add_subplot(111)
 
@@ -34,7 +34,7 @@ for cat in expclassesobj.data:
         label="single site"
     else:
         clr='c'
-        label = "non single site"
+        label = "non-single site"
     if label in labels:
         label = None
     else:
@@ -56,7 +56,9 @@ for cat in expclassesobj.data:
 conv_vec = np.logspace(-5,-.01,num=1e2,base=10)
 plot_sel(ax,conv_vec,0.55,T_fix,facecolor='k',color='k')
 
-ax.legend(loc=3,fontsize=10)
+plt.text(-5.7,-12,'(b)',fontsize=30)
+ax.legend(loc='best',fontsize=14)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')
-plt.savefig('fig-10b-extrap-ss-nss.pdf')
+plt.tight_layout()
+plt.savefig('fig-9b-extrap-ss-nss.pdf')
