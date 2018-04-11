@@ -132,9 +132,9 @@ ax.set_ylabel(r'$E^a_{CH_4}$ (eV)',fontsize=20)
 #for h in clr_handles:
 #    h.set_marker('o')
 
-if make_legend == True:
+#if make_legend == True:
     #plt.legend(loc=3,fontsize=10,ncol=2,handles=shape_handles)
-    plt.legend(loc=2,fontsize=13,ncol=2,handles=clr_handles)
+    #plt.legend(loc=2,fontsize=13,ncol=2,handles=clr_handles)
 
 if ellipse_plot==True:
     ax.set_xlim(-0.75,1.75)
@@ -145,6 +145,7 @@ else:
     ax.text(0,-0.5,'m=%4.2f\nb=%4.2f'%(m,b))
 
 
+plt.legend(fontsize=13,ncol=2,loc='best')
 left, bottom, width, height = [0.6, 0.33, 0.3, 0.3]
 ax2 = fig.add_axes([left, bottom, width, height],frameon=False)
 ax2color = 'darkslategrey'
@@ -183,7 +184,6 @@ ax2.set_xlabel(r'$ \Delta E^a_{theory}$ (eV)',fontsize=15,color=ax2color)
 #plt.text(-0.1,-0.7,'(b)',fontsize=30)
 #plt.title(title,fontsize=20)
 #plt.tight_layout()
-#plt.legend(fontsize=14,loc=2)
 
 #plt.savefig('fig-2b-DFT-dEa-hist.pdf')
 

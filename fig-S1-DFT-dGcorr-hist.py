@@ -18,8 +18,8 @@ dco = dco.filter(lambda x: x.vibs_ch3oh !=None)
 P = 101325
 T=300
 
-#plttype='$\Delta$ZPE' 
-plttype='$\Delta$G' 
+plttype='$\Delta$ZPE' 
+#plttype='$\Delta$G' 
 #plttype='$\Delta$S' 
 #plttype='$\Delta$C' 
 

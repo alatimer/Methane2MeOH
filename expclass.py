@@ -110,7 +110,10 @@ class expclass:
             sel = (1-conv_vec-(1-conv_vec)**(k2_k1))/(conv_vec*(k2_k1-1))
             return sel
         def dEa_min_fun(exp_dEa,T,S,X):
-            dGa = exp_dEa + dftclasses_object.fun_dGcorr(T,P)
+            ### Just use linear approximation to temperature dependence of G
+            dGa = exp_dEa - 3.942e-4*T - 0.0289
+            ###"Real" free energy corrections from DFT calculations
+            #dGa = exp_dEa + dftclasses_object.fun_dGcorr(T,P)
             diff = (sel_fun(X,dGa,T)*100-S)**2
             return diff
         bounds =[(0.1,1.2)]
