@@ -42,6 +42,7 @@ clrs_dict = {
     'Sodalite':'plum',
     'Gas-phase':'white',
     'Zeolite':'forestgreen',
+    'Zeolite-HSE':'lightgreen',
     'Rutile(110)':'firebrick',
     'Metal(111)':'goldenrod',
     'Graphene':'powderblue',

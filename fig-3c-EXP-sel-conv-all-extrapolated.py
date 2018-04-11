@@ -68,7 +68,7 @@ for cat in expclassesobj.data:
 
 
 
-ax.legend(loc=3,fontsize=10)
+ax.legend(loc=3,fontsize=15)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')
 plt.savefig('fig-3c-EXP-sel-conv-all-extrapolated.pdf')

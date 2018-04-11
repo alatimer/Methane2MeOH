@@ -9,6 +9,7 @@ from scipy.stats import norm
 from ase.units import kB,_hplanck
 from selclass import selclass
 from PointParameters import get_color
+from Selectivity import plot_sel
 
 ##### PARAMETERS ######
 sigma = 0.07
@@ -48,8 +49,9 @@ for cond in condns:
     T_av = np.array(condns[cond]['T']).mean()
     clr = condns[cond]['color']
     solv_corr = condns[cond]['solv_corr']
-    selobj = selclass(conv_vec,dftobj,color=clr)
-    selobj.fun_err(ax,plugerr,dEa-solv_corr,T_av,T_low=T_low,T_hi=T_hi)
+    #selobj = selclass(conv_vec,dftobj,color=clr)
+    #selobj.fun_err(ax,plugerr,dEa-solv_corr,T_av,T_low=T_low,T_hi=T_hi)
+    plot_sel(ax,conv_vec,dEa-solv_corr,T_av,T_low=T_low,T_hi=T_hi,facecolor=clr,color=clr)
 
 ######## Plot EXPERIMENTAL DATA ######
 catlistobj = catlistobj.classfilter(lambda x: x.cattype !='MMO')
@@ -62,7 +64,7 @@ for pt in catlistobj.data:
     else:
         labels.append(label)
     ax.plot(pt.log_conv,pt.sel,'o',color=get_color(pt.category),marker='o',label=label,fillstyle='full',markersize=ptsize,clip_on=False)
-    ax.text(pt.log_conv,pt.sel,str(pt.T),fontsize=7,ha='center',va='center',color='k')
+    #ax.text(pt.log_conv,pt.sel,str(pt.T),fontsize=7,ha='center',va='center',color='k')
 
 ###### PLOT PARAMETERS #####
 

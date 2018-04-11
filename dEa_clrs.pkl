@@ -7,9 +7,10 @@ aS'plum'
 p3
 aS'forestgreen'
 p4
-ag4
-aS'goldenrod'
+aS'lightgreen'
 p5
-aS'cyan'
+aS'goldenrod'
 p6
+aS'cyan'
+p7
 a.

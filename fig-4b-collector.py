@@ -84,6 +84,8 @@ for col in collector_dict:
     ax.annotate(col,[dE,move],color=clr)
     plt.axvline(x=dE,color=clr,ls='--')
 #Save figure
+
+plt.text(-3,200,'(b)',fontsize=30)
 plt.tight_layout()
 plt.savefig('fig-4b-collector.pdf')
 

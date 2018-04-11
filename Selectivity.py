@@ -5,10 +5,10 @@ import numpy as np
 import matplotlib as plt
 
 def dEa2dGa(dEa,T):
-    return dEa - 4.191e-4*T - 0.0152
+    return dEa - 3.942e-4*T - 0.0289
 
 def err_fun(T):
-    return 8.744e-5*T+0.0886
+    return 4.7e-5*T+0.0572
 
 def sel_fun(conv,T,dEa=None,dGa=None,error=None):
     if dGa == None:

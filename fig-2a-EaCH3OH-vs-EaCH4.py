@@ -44,8 +44,9 @@ for cat in catlistobj.data:
     labeler = cat.cattype
     marker = 'o'#get_shape(cat.cattype)
     #cattype = cat.cattype
-    #if 'HSE' in cat.tag:
-    #    labeler+='-HSE'
+    if 'HSE' in cat.tag:
+        #marker = 's'
+        labeler+='-HSE'
     if labeler in classes_idx:
         label = '_nolegend_'
     else:
@@ -104,8 +105,8 @@ ax.plot(x_array,x_array*m+b,color='k',zorder=1)
 ax.plot(x_array,x_array*m+(b+mu_std),'--',color='k',zorder=1)
 ax.plot(x_array,x_array*m+(b-mu_std),'--',color='k',zorder=1)
 
-ax.set_xlabel(r'$E^a_{CH_3OH}$ (eV)')
-ax.set_ylabel(r'$E^a_{CH_4}$ (eV)')
+ax.set_xlabel(r'$E^a_{CH_3OH}$ (eV)',fontsize=20)
+ax.set_ylabel(r'$E^a_{CH_4}$ (eV)',fontsize=20)
 
 #for h in shape_handles:
 #    h.set_color('k')
@@ -115,7 +116,7 @@ ax.set_ylabel(r'$E^a_{CH_4}$ (eV)')
 
 if make_legend == True:
     #plt.legend(loc=3,fontsize=10,ncol=2,handles=shape_handles)
-    plt.legend(loc=2,fontsize=10,ncol=2,handles=clr_handles)
+    plt.legend(loc=2,fontsize=13,ncol=2,handles=clr_handles)
 
 if ellipse_plot==True:
     ax.set_xlim(-0.75,1.75)

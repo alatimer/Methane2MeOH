@@ -43,10 +43,15 @@ for i,T in enumerate(Ts):
         dmT['dG'][i][j] = cat.get_dGcorr(T,P)+cat.ets_ch4-cat.ets_ch3oh
         dmT['dE'][i][j] = cat.ets_ch4-cat.ets_ch3oh
 
+fig2=plt.figure(figsize=(8,8))
+ax1 = fig2.add_subplot(221)
+ax2 = fig2.add_subplot(222)
+ax3 = fig2.add_subplot(223)
+ax4 = fig2.add_subplot(224)
+axes = [ax1,ax2,ax3,ax4]
+
 fig = plt.figure()
 ax = fig.add_subplot(111)
-
-
 
 labels= {'dZPE':r'$\Delta E_{ZPE}^a$',
          'dS':r'$ \Delta S^a$',
@@ -57,15 +62,28 @@ labels= {'dZPE':r'$\Delta E_{ZPE}^a$',
          'dE':r'$\Delta E^a$',
          }
 colors = ['b','c','r','m','green','pink','lightgreen']
+j=0
 for i,dX in enumerate(dmT.keys()):
-    if dX in ['dS','dGc']:
-        continue
     avg_vT = np.mean(dmT[dX],axis=1)
     std_vT = np.std(dmT[dX],axis=1)
+
+    if dX in ['dS','dG','dZPE','dCv']:
+        n,bins,patches = axes[j].hist(dmT[dX][0],5,normed=1)
+        print dmT[dX][0]
+        #axes[j].set_xlim([-.25,.75])
+        #axes[j].set_ylim([0,8])
+        xmin, xmax = axes[j].get_xlim()
+        print xmin,xmax
+        j+=1
+    if dX in ['dS','dGc']:
+        continue
     ax.fill_between(Ts,avg_vT+std_vT,avg_vT-std_vT,color=colors[i],alpha=0.2)
     ax.plot(Ts, avg_vT, linewidth=2,label=labels[dX],color=colors[i])
+   
+pylab.figure(fig2.number)
+plt.savefig('spread.pdf')
 
-p,C_p = np.polyfit(Ts,np.mean(dmT['dGc'],axis=1),1,cov=True)
+p,C_p = np.polyfit(Ts,np.mean(dmT['dG'],axis=1),1,cov=True)
 m,b=p
 print "dGc linear fit: ",m,b
 per,C_per = np.polyfit(Ts,np.std(dmT['dG'],axis=1),1,cov=True)
@@ -92,6 +110,7 @@ plt.ylabel(r'$\Delta G^a$ (eV)')
 plt.xlabel('T (K)')
 plt.legend(fontsize=13,loc='lower left')
 plt.savefig('dGcorr_T.pdf')
+
 
 plt.cla()
 kB=0.00008617

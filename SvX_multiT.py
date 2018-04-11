@@ -23,13 +23,15 @@ dEa_theory=0.55
 #dGcorr = -4.191e-4*T_fix-0.0152 
 sigma = 0.07  #put in temperature dependence, check dGa spread for real
 
-size=(8,6)
+size=(5,4)
 fig = plt.figure(1,figsize=size)
 ax = fig.add_subplot(111)
 
 #### Plot Model selectivity ####
 conv_vec = np.logspace(-8,-.01,num=1e2,base=10)
-Ts = np.arange(275,900,50)
+step = 50
+Ts = np.arange(275,900,step)
+
 
 def sel_fun(conv,dEa,T,error=None):
     m_err = 8.744e-05 
@@ -51,7 +53,7 @@ def sel_fun(conv,dEa,T,error=None):
 
 #### Experimental points #####
 for T in Ts:
-    if T<373:
+    if T<424:
         condns = ['aqueous','gas']
     else:
         condns = ['gas']
@@ -61,16 +63,18 @@ for T in Ts:
             dEa = dEa_theory-solv_corr
         else:
             dEa = dEa_theory
-        plt.cla()
+        plt.close('all')
+        fig = plt.figure(1,figsize=size)
+        ax = fig.add_subplot(111)
 
-        plot_sel(ax,conv_vec,dEa,T,T_low=T-25,T_hi=T+25,facecolor='c',color='c')
+        plot_sel(ax,conv_vec,dEa,T,T_low=T-step/2.,T_hi=T+step/2.,facecolor='c',color='c')
         #ax.plot(np.log10(conv_vec),sel_fun(conv_vec,dEa,T))
         #ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa,T,error='-'),sel_fun(conv_vec,dEa,T,error='+'),alpha=0.2)
         #V old error V
         #ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa+sigma,T),sel_fun(conv_vec,dEa-sigma,T),alpha=0.2)
         count = 0
         for cat in expclassesobj.data:
-            if cat.T >= T-25 and cat.T<=T+25 and cat.rxntype == condn:
+            if cat.T >= T-step and cat.T<=T+step and cat.rxntype == condn:
                 count+=1
                 label = '%s'%(cat.category)
                 #if cat.rxntype=='aqueous':
@@ -89,9 +93,10 @@ for T in Ts:
                         markersize=10,
                         clip_on=False)
         
-        if count != 0:
+        if 1==1:#count != 0:
             ax.legend(loc='best',fontsize=10)
             ax.set_xlabel(r'log(CH$_4$ conversion)')
             ax.set_ylabel(r'CH$_3$OH selectivity (%)')
-            ax.set_title('T=%i+/-25 K; %s'%(int(T),condn))
+            ax.set_title('T=%i+/-%i K; %s'%(int(T),math.ceil(step/2.),condn))
+            plt.tight_layout()
             plt.savefig('figs/fig-SvX-T%i-%s.pdf'%(int(T),condn))

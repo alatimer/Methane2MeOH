@@ -39,7 +39,7 @@ for mat in dftobj.data:
         else:
             dEa_dict[mclass] = {}
             dEa_dict[mclass]['dEas'] = [dEa]
-            dEa_dict[mclass]['clr'] = get_color(mat.cattype)
+            dEa_dict[mclass]['clr'] = get_color(mclass)
             #dEa_dict[mclass]['clr'] = mat.color
         dEa_all.append(dEa)
         #print mat.cat,mat.cattype, mat.ets_ch4,mat.ets_ch3oh,dEa
@@ -58,7 +58,7 @@ pickle.dump( dEa_all, open( "dEa_all.pkl", "wb" ) )
 pickle.dump( dEa_multi, open( "dEa_multi.pkl", "wb" ) )
 pickle.dump( colors, open( "dEa_clrs.pkl", "wb" ) )
 
-n,bins,patches = plt.hist(dEa_multi,nbins,normed=1,label=labels,color = colors,stacked=True,alpha=0.6)
+n,bins,patches = plt.hist(dEa_multi,nbins,normed=1,label=labels,color = colors,stacked=True,alpha=1.0)
 mu,std = norm.fit(dEa_all)
 plt.xlim(0,1)
 #  plt.ylim(0,8)
@@ -67,10 +67,10 @@ x = np.linspace(xmin, xmax, 100)
 p = norm.pdf(x, mu, std)
 plt.plot(x, p, 'k', linewidth=2)
 title = r"Fit results: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std)
-plt.ylabel(r'Counts')
-plt.xlabel(r'$E^a_{CH_4} - E^a_{CH_3OH}$ (eV)')
+plt.ylabel(r'Counts',fontsize=20)
+plt.xlabel(r'$ \Delta E^a_{theory} = E^a_{CH_4} - E^a_{CH_3OH}$ (eV)',fontsize=20)
 plt.text(-0.1,-0.7,'(b)',fontsize=30)
-plt.title(title)
+plt.title(title,fontsize=20)
 plt.tight_layout()
 plt.legend(fontsize=14,loc=2)
 

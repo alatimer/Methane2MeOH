@@ -176,7 +176,7 @@ Mn_GN  = dftclass('Mn','GN',
 
 Tc_GN  = dftclass('Tc','GN',
         vibloc_ch4 ='/home/alatimer/work_dir/meoh-vs-methane/Tc-GN/methane/' ,
-        vibloc_ch3oh='/home/alatimer/work_dir/meoh-vs-methane/Tc-GN/meoh/too-few/',
+        vibloc_ch3oh='/home/alatimer/work_dir/meoh-vs-methane/Tc-GN/meoh/',
         tag='no-beef'   )
 
 Fe_GN  = dftclass('Fe','GN',
@@ -260,7 +260,7 @@ dftclasses_obj = dftclasses([
     Rh,
 
     #Rh_GN_lo,
-    #Tc_GN, #waiting for meoh vibs to finish
+    Tc_GN, #waiting for meoh vibs to finish
     Rh_GN,
     Ru_GN,
     Mn_GN,

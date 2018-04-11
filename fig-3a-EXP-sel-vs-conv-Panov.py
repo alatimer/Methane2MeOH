@@ -9,6 +9,7 @@ from scipy.stats import norm
 from ase.units import kB,_hplanck
 from selclass import selclass
 from PointParameters import get_color
+from Selectivity import plot_sel
 
 ##### PARAMETERS ######
 sigma = 0.07
@@ -43,8 +44,9 @@ for cond in condns:
     T_av = np.array(condns[cond]['T']).mean()
     clr = condns[cond]['color']
     solv_corr = condns[cond]['solv_corr']
-    selobj = selclass(conv_vec,dftobj,color=clr)
-    selobj.fun_err(ax,err,dEa,T_av,T_low=T_low,T_hi=T_hi)
+    #selobj = selclass(conv_vec,dftobj,color=clr)
+    #selobj.fun_err(ax,err,dEa,T_av,T_low=T_low,T_hi=T_hi)
+    plot_sel(ax,conv_vec,dEa,T_av,T_low=T_low,T_hi=T_hi,facecolor=clr,color=clr)
 
 ######## Plot EXPERIMENTAL DATA ######
 labels=[]

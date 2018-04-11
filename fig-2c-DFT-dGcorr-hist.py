@@ -16,16 +16,33 @@ dco = dco.filter(lambda x: x.vibs_ch3oh !=None)
 
 #Conditions at which to evaluate dGcorr
 P = 101325
-T=900
+T=300
 
-nbins=5
+#plttype='$\Delta$ZPE' 
+plttype='$\Delta$G' 
+#plttype='$\Delta$S' 
+#plttype='$\Delta$C' 
+
+nbins=6
 
 dGcorr_list = []
 dGcorr_dict={}
 for cat in dco.data:
     #dGcorr =  -T*cat.get_dS(T) + cat.ets_ch4 - cat.ets_ch3oh
-    #dGcorr =  cat.get_dZPE() #+ cat.ets_ch4 - cat.ets_ch3oh
-    dGcorr = cat.ets_ch4 - cat.ets_ch3oh + cat.get_dGcorr(T,P) 
+    
+    if plttype=='$\Delta$ZPE' :
+        dGcorr=cat.get_dZPE() #+ cat.ets_ch4 - cat.ets_ch3oh
+        lims=[-0.2,0.2]
+    if plttype=='$\Delta$G' :
+        dGcorr = cat.ets_ch4 - cat.ets_ch3oh + cat.get_dGcorr(T,P) 
+        lims=[-0.5,1]
+    if plttype=='$\Delta$S' :
+        dGcorr = cat.get_dS(T) 
+        lims=[-0.0002,0.0011]
+    if plttype=='$\Delta$C' :
+        dGcorr = cat.get_dC(T) 
+        lims=[-0.05,0.05]
+
     dGcorr_list.append(dGcorr)
     print cat.cat, cat.cattype
     if cat.cattype in dGcorr_dict.keys():
@@ -36,10 +53,10 @@ for cat in dco.data:
         dGcorr_dict[cat.cattype]['clr'] = get_color(cat.cattype)
     #print cat.cat,'/',cat.cattype,'/',cat.vibs_ch4,'/',cat.vibs_ch3oh
  
-fig = plt.figure()
+fig = plt.figure(figsize=(5,4))
 ax = fig.add_subplot(111)
 #ax.set_xlim(-.75,0.25)
-ax.set_xlim(-.5,1.0)
+ax.set_xlim(lims)
 
 dGcorr_multi = []
 labels=[]
@@ -59,6 +76,8 @@ ax.plot(x, p, 'k', linewidth=2)
 title = r"Fit results: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std)
 plt.title(title)
 plt.ylabel('Counts')
-plt.xlabel(r'$\Delta$ZPE + $T\Delta$S @ %i K (eV)'%(T))
-plt.legend(fontsize=10)
+plt.xlabel(r'%s'%(plttype)+'@ %i K'%(T))
+#plt.xlabel(r'$\Delta$ZPE + $T\Delta$S @ %i K (eV)'%(T))
+plt.legend(loc='best',fontsize=10)
+plt.tight_layout()
 plt.savefig('fig-2c-DFT-dGcorr-hist.pdf')
