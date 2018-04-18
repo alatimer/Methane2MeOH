@@ -99,4 +99,4 @@ for T in Ts:
             ax.set_ylabel(r'CH$_3$OH selectivity (%)')
             ax.set_title('T=%i+/-%i K; %s'%(int(T),math.ceil(step/2.),condn))
             plt.tight_layout()
-            plt.savefig('figs/fig-SvX-T%i-%s.pdf'%(int(T),condn))
+            plt.savefig('figs/fig-5-SvX-T%i-%s.pdf'%(int(T),condn))
