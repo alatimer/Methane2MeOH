@@ -87,7 +87,7 @@ for col in collector_dict:
 
 plt.text(-3,200,'(b)',fontsize=30)
 plt.tight_layout()
-plt.savefig('fig-4b-collector.pdf')
+plt.savefig('fig-6b-collector.pdf')
 
 
 ###Plotting other fig

@@ -189,5 +189,5 @@ ax2.set_xlabel(r'$ \Delta E^a_{theory}$ (eV)',fontsize=15,color=ax2color)
 
 
 plt.tight_layout()
-plt.savefig('fig-2-all.pdf')
+plt.savefig('fig-2-dEa_DFT.pdf')
 
