@@ -56,7 +56,7 @@ for j,T in enumerate(T_vec):
         logPCH3OH_thresh = math.log10(lim_PCH3OH(dE,dS,T,theta_lim))
         logPCH3OH_thresh = max(logPCH3OH_thresh,-15) #needed for some weird math problems
         #print dE,T,logPCH3OH_thresh
-        conv = min(10**logPCH3OH_thresh/P0CH4,1) #assuming PCH4=1atm
+        conv = min(10**logPCH3OH_thresh/P0CH4,1) 
         sel = sel_fun(conv,dGa,T)
         logP_grid[j][i]=logPCH3OH_thresh
         sel_grid[j][i] = max(0,min(sel,1))
