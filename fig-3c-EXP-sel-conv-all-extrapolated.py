@@ -56,6 +56,8 @@ for cat in expclassesobj.data:
             markersize=10,
             clip_on=False)
 
+
+ax.set_title('T=%i K; all data (extrapolated)'%(int(T_fix)))
 ax.legend(loc=3,fontsize=15)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')

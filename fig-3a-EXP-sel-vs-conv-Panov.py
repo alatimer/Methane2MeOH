@@ -30,7 +30,8 @@ catlistobj = pickle.load(open('expobj.pkl','rb'))
 catlistobj = catlistobj.classfilter(lambda x: x.author =='Panov')
 
 condns = {}
-condns['panov']={'T':[543,573],'line':'-','color':'k','solv_corr':0}
+condns['panov']={'T':[558,558],'line':'-','color':'k','solv_corr':0}
+#condns['panov']={'T':[543,573],'line':'-','color':'k','solv_corr':0}
 
 #Plot model ## 
 for cond in condns:
