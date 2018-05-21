@@ -68,7 +68,7 @@ x = np.linspace(-.2, 2, 1000)
 p = norm.pdf(x, mu, std)
 h, = plt.plot(x, p, expcolor, linewidth=2)
 lines.append(h)
-ax.text(0.05,5.5,r"Experimental: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std),color=expcolor)
+ax.text(0.05,5.5,r"Experiment: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std),color=expcolor)
 
 ##########  LOAD THEORY FIT (from fig-2b)        ############3
 dft_dEa_all = pickle.load(open('dEa_all.pkl','rb'))
@@ -90,8 +90,8 @@ ax.text(0.05,5.2,r"Theory: $\mu$ = %.2f,  $\sigma$ = %.2f" % (mu, std),color=the
 
 plt.text(-0.105,-0.7,'(b)',fontsize=30)
 plt.ylabel(r'Counts')
-#plt.xlabel(r'$\Delta E^a$ (eV)')
-plt.xlabel(r'$\Delta E^a_{exp}$ (eV)',fontsize=20)
+#plt.xlabel(r'$\Delta E^a_{exp}$ (eV)',fontsize=20)
+plt.xlabel(r'$\Delta E^a$ (eV)',fontsize=20)
 plt.xlim(0,1)
 plt.ylim(0,6)
 plt.tight_layout()

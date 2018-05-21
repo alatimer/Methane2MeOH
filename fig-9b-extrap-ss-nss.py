@@ -22,7 +22,7 @@ dEa_guess=0.55
 T_fix=700
 P = 101325
 
-size=(7,5)
+size=(8,6)
 fig = plt.figure(1,figsize=size)
 ax = fig.add_subplot(111)
 

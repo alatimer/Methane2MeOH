@@ -19,7 +19,7 @@ catlistobj = catlistobj.classfilter(lambda x: x.sel!=0)
 catlistobj = catlistobj.classfilter(lambda x: x.sel!=100)
 catlistobj = catlistobj.classfilter(lambda x: x.cattype!='MMO')
 
-fig = plt.figure(figsize=(5,4))
+fig = plt.figure(figsize=(8,6))
 ax = fig.add_subplot(111)
 
 exp_dEa_list = []
@@ -49,4 +49,5 @@ plt.xlabel(r'$\Delta E^a_{exp}$ (eV)')
 #plt.xlim(0,1)
 plt.ylim(0,4)
 plt.tight_layout()
+plt.text(0.2,-0.4,'(a)',fontsize=30)
 plt.savefig('fig-9a-exp-dEa-hist-ALL.pdf')

@@ -7,7 +7,6 @@ from expclass import *
 from scipy.optimize import minimize
 from scipy.stats import norm
 from ase.units import kB,_hplanck
-from selclass import selclass
 from Selectivity import plot_sel,sel_fun
 from PointParameters import get_color
 
@@ -48,13 +47,9 @@ for cond in condns:
     T_hi = condns[cond]['T'][1]
     T_av = np.array(condns[cond]['T']).mean()
     clr = condns[cond]['color']
-    selobj = selclass(conv_vec,dftobj,color=clr)
     dGa=condns[cond]['dGa']
-    sel_vec = selobj.sel_fun(dEa,T_av,P,dGa=dGa)
-    print dGa,T_av
-    #ax.plot(np.log10(conv_vec),sel_vec,color=clr)
-    ax.plot(np.log10(conv_vec),sel_fun(conv_vec,T_av,dGa),color=clr)
-    #plot_sel(ax,conv_vec,0.55,T_av,T_low=None,T_hi=None,error=True,facecolor='w',color='g')
+    sel_vec = sel_fun(conv_vec,T_av,dGa=dGa)
+    ax.plot(np.log10(conv_vec),sel_vec,color=clr)
 
 ######## Plot EXPERIMENTAL DATA ######
 labels=[]

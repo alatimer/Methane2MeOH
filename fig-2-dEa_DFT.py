@@ -24,7 +24,7 @@ def PCA_ellipse(xi,yi,ax,**ellipse_kwargs):
              angle=theta,**ellipse_kwargs)
     ax.add_artist(E)
 
-fig = plt.figure(figsize=(7,5))
+fig = plt.figure(figsize=(8,6))
 ax = fig.add_subplot(111)
 
 dEa_dict={}
@@ -139,14 +139,14 @@ ax.set_ylabel(r'$E^a_{CH_4}$ (eV)',fontsize=20)
 if ellipse_plot==True:
     ax.set_xlim(-0.75,1.75)
     ax.set_ylim(0,2.5)
-    ax.text(-0.6,1.2,r'$E^a_{CH_4}=%4.2fE^a_{CH_3OH}+%4.2f$'%(m,b)+'\n'+r'$MAE=%4.2f$'%(MAE))
+    ax.text(-0.6,1.2,r'$E^a_{CH_4}=%4.2fE^a_{CH_3OH}+%4.2f$'%(m,b)+'\n'+r'$MAE=%4.2f$'%(MAE),fontsize=20)
     #plt.text(-1.1,-0.4,'(a)',fontsize=30)
 else:
     ax.text(0,-0.5,'m=%4.2f\nb=%4.2f'%(m,b))
 
 
 plt.legend(fontsize=13,ncol=2,loc='best')
-left, bottom, width, height = [0.6, 0.33, 0.3, 0.3]
+left, bottom, width, height = [0.58, 0.3, 0.33, 0.33]
 ax2 = fig.add_axes([left, bottom, width, height],frameon=False)
 ax2color = 'darkslategrey'
 
