@@ -33,7 +33,7 @@ ax = fig.add_subplot(111)
 #### Plot Model selectivity ####
 conv_vec = np.logspace(-8,-.01,num=1e2,base=10)
 step = 50
-Ts = np.arange(275,900,step)
+Ts = np.arange(275,950,step)
 
 
 def sel_fun(conv,dEa,T,error=None):
@@ -95,7 +95,7 @@ for T in Ts:
                         fillstyle='full',
                         markersize=10,
                         clip_on=False)
-                ax.text(cat.log_conv,cat.sel,str(cat.T))
+                #ax.text(cat.log_conv,cat.sel,str(cat.T))
         
         if 1==1:#count != 0:
             ax.legend(loc='best',fontsize=10)
