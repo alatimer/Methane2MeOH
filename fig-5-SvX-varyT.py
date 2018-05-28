@@ -17,6 +17,9 @@ expclassesobj = expclassesobj.classfilter(lambda x: x.sel!=0)
 expclassesobj = expclassesobj.classfilter(lambda x: x.single_site=='yes')
 #exclude exp MMO, diffusion limited
 expclassesobj = expclassesobj.classfilter(lambda x: x.cattype!='MMO')
+#expclassesobj = expclassesobj.classfilter(lambda x: x.rxntype!='aqueous')
+
+print len(expclassesobj.data)
 
 solv_corr=0.22
 dEa_theory=0.55
@@ -74,7 +77,7 @@ for T in Ts:
         #ax.fill_between(np.log10(conv_vec),sel_fun(conv_vec,dEa+sigma,T),sel_fun(conv_vec,dEa-sigma,T),alpha=0.2)
         count = 0
         for cat in expclassesobj.data:
-            if cat.T >= T-step and cat.T<=T+step and cat.rxntype == condn:
+            if cat.T >= T-step/2. and cat.T<=T+step/2. and cat.rxntype == condn:
                 count+=1
                 label = '%s'%(cat.category)
                 #if cat.rxntype=='aqueous':
@@ -92,6 +95,7 @@ for T in Ts:
                         fillstyle='full',
                         markersize=10,
                         clip_on=False)
+                ax.text(cat.log_conv,cat.sel,str(cat.T))
         
         if 1==1:#count != 0:
             ax.legend(loc='best',fontsize=10)
