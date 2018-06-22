@@ -40,7 +40,7 @@ ax = fig.add_subplot(111)
 labels=[]
 for cat in expclassesobj.data:
     label = '%s-%s, %s'%(cat.cat,cat.cattype,cat.author)
-    label = '%s'%(cat.cat)
+    label = '%s'%(cat.category)
     if label in labels:
         label = None
     else:
@@ -69,4 +69,4 @@ ax.legend(loc=3,fontsize=10)
 ax.set_xlabel(r'log(CH$_4$ conversion)')
 ax.set_ylabel(r'CH$_3$OH selectivity (%)')
 ax.set_xlim([-8,0])
-plt.savefig('fig-S9-aq-extrap.pdf')
+plt.savefig('fig-S13-aq-extrap.pdf')
