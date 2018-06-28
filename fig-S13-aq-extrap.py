@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import math
 from ase.units import kB
 import numpy as np
-from selclass import selclass
 from PointParameters import get_color
 from Selectivity import plot_sel,sel_fun
 
@@ -61,8 +60,6 @@ for cat in expclassesobj.data:
 
 #### Plot Model selectivity ####
 conv_vec = np.logspace(-8,-.01,num=1e2,base=10)
-selobj = selclass(conv_vec,dftobj,color='c')
-selobj.fun_err(ax,err,dEa_guess-solv_corr,T_fix,P)
 plot_sel(ax,conv_vec,0.55-solv_corr,T_fix,facecolor='c',color='c')
 
 ax.legend(loc=3,fontsize=10)
