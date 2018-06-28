@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from scipy.optimize import minimize
 from scipy.stats import norm
 from ase.units import kB,_hplanck
-from selclass import selclass
 import pickle
 from Selectivity import sel_fun,plot_sel
 
