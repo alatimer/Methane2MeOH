@@ -4,12 +4,23 @@ import math
 import numpy as np
 import matplotlib as plt
 
+######
+#Class for determining and plotting the selectivity
+#and 1-sigma errors expected from the kinetic model 
+#given a dEa or dGa.
+######
+
+# Returns the linear approximation to dGa (see SI Section 2)
 def dEa2dGa(dEa,T):
     return dEa - 3.942e-4*T - 0.0289
 
+# Returns the linear approximation to the error on dGa 
+# at a given temperature (see SI Section 2)
 def err_fun(T):
     return 4.7e-5*T+0.0572
 
+# Given a conversion (scalar or vector), T, and dEa or dGa, returns the 
+# expected selectivity based on Eq. 1 (main text)
 def sel_fun(conv,T,dEa=None,dGa=None,error=None):
     if dGa == None:
         dGa = dEa2dGa(dEa,T)
@@ -21,7 +32,9 @@ def sel_fun(conv,T,dEa=None,dGa=None,error=None):
     sel = (1-conv-(1-conv)**(k2_k1))/(conv*(k2_k1-1))*100
     return sel #in percent
 
-def plot_sel(ax,conv,dEa,T,T_low=None,T_hi=None,error=True,facecolor='w',**kwargs):
+# Given a plt.axis instance, a conversion (vector), a T, and a dEa or dGa, plots the 
+# expected on the provided axis the selectivity based on Eq. 1 (main text)
+def plot_sel(ax,conv,dEa,T,T_low=None,T_hi=None,facecolor='w',**kwargs):
 
     #ax.plot(conv,sel_fun(conv,dEa,T),**kwargs)
     if T_low == None:
