@@ -1,7 +1,7 @@
 # Methane2MeOH
 
 This repo contains the scripts and data files used to generate
-work in publication DOI: XXXX.  
+work in publication DOI: 10.1021/acscatal.8b00220.  
 
 An interactive version of figure 5 can be found at: https://plot.ly/~alatimer/7
 
@@ -13,4 +13,4 @@ Atoms objects and other attributes related to the DFT calculations performed in 
 The previously published experimental data analyzed in this work is provided in a tab-separated file exp.dat that includes DOI numbers for each paper.
 
 If you use this work in your research, please consider citing:
-XXXX
+10.1021/acscatal.8b00220
