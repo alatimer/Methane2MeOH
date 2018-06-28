@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import math
 from ase.units import kB
 import numpy as np
-from selclass import selclass
 from Selectivity import sel_fun,plot_sel
 
 ##### load exp data #########

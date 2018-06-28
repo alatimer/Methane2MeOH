@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import math
 from ase.units import kB
 import numpy as np
-from selclass import selclass
 from PointParameters import get_color,get_shape
 from Selectivity import plot_sel
 
