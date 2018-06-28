@@ -3,6 +3,9 @@
 from expclass import expclass,expclasses
 import pickle
 
+# Takes experimental data in exp.dat and returns expobj.pkl, which has experimental data stored in class structure 
+# specified in expclass.py
+
 def reader(file_name,cat_list):
     for i,line in enumerate(open(file_name,'r').readlines()):
         if i == 0:

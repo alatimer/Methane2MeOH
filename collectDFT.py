@@ -2,9 +2,8 @@
 
 from dftclass import dftclass,dftclasses
 import pickle
-#from ase import Atoms
-#from ase.io import read,write
-#import numpy as np
+
+# DEPRECATED, do not use.  This file was used to scrape data from their original directories for use in this manuscript.
 
 def reader(file_name, dftclasses_obj):
     """

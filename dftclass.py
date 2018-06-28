@@ -8,6 +8,7 @@ from ase.thermochemistry import HarmonicThermo, IdealGasThermo
 
 class dftclass:
     """
+    Class for atoms objects
     """
     def __init__(self, 
             cat, 
@@ -63,66 +64,6 @@ class dftclass:
         self.ch_ch4 = None
         self.ch_ch3oh = None
         
-
-        ''' 
-        clrs_dict = {
-            
-
-            'Mn':'lime',
-            'Cr':'lightblue',
-            'Tc':'salmon',
-            'Au':'gold',
-            'Pd':'darkviolet',
-            'Ag':'darkgray',
-            'Pt':'lavender',
-            'Ir':'navy',
-            'Ru':'darkcyan',
-            'Fe':'firebrick',
-            'Cu':'goldenrod',
-            'Cu-Fe':'firebrick',
-            'V':'blue',
-            'Mo':'m',
-            'Ga':'green',
-            'W':'orange',
-            'Co':'cyan',
-            'Ni':'pink',
-            'Rh':'lightskyblue',
-            'Au-Pd':'palegoldenrod',
-
-            'rutile-110':'firebrick',
-            'metal-111':'goldenrod',
-            'GN':'pink',
-            'BN':'forestgreen',
-            'CHA-MO':'lightgreen',
-            'CHA-MOH':'m',
-            'SAPO-34-MO':'lightskyblue',
-            'CHA-MOM':'indianred',
-            'MOR-MOM':'grey',
-            'porphyrin':'cyan',
-            }
-
-        shape_dict = {
-                'rutile-110':'o',
-                'metal-111':'s',
-                'GN':'8',
-                'BN':'p',
-                'CHA-MO':'<',
-                'CHA-MOH':'>',
-                'MOR-MOM':'^',
-                }
-
-        if 'HSE' in self.tag:
-            self.shape = 's'
-         #   self.shape = shape_dict[self.cattype]
-        else:
-            self.shape = 'o'
-
-        #if self.cat in clrs_dict.keys():
-           # self.color = clrs_dict[self.cat]
-        #else:
-        #    self.color = 'grey'
-        '''
-
         #def populate_atoms(self):
         if self.traj_ch4 !=None:
             self.atoms_ch4 = read(self.traj_ch4)
@@ -284,6 +225,7 @@ class dftclass:
 
 class dftclasses:
     """
+    Class for a set of dftclass objects
     """
 
     def __init__(self, dftclasses):
