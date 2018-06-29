@@ -1,4 +1,3 @@
-#Embedded file name: /scratch/users/alatimer/meoh-vs-methane/analysis/catclass.py
 from ase import Atoms
 from ase.io import read, write
 import pickle
