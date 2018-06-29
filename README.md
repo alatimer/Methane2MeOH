@@ -1,7 +1,7 @@
 # Methane2MeOH
 
 This repo contains the scripts and data files used to generate
-work in publication: https://doi.org/10.1021/acscatal.8b00220.  
+the work in publication: https://doi.org/10.1021/acscatal.8b00220.  
 
 If you use this work in your research, please consider citing:
 
