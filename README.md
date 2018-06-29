@@ -1,15 +1,16 @@
 # Methane2MeOH
 
 This repo contains the scripts and data files used to generate
-work in publication DOI: 10.1021/acscatal.8b00220.  
+work in publication: https://doi.org/10.1021/acscatal.8b00220.  
+
+If you use this work in your research, please consider citing:
+
+Latimer, A. A.; Kakekhani, A.; Kulkarni, A. R.; Nørskov, J. K. Direct Methane to Methanol : The Selectivity − Conversion Limit and Design Strategies. 2018.
 
 An interactive version of figure 5 can be found at: https://plot.ly/~alatimer/7
 
 ## Abstract:
 Currently, methane is transformed into methanol through the two-step syngas process which requires high temperatures and centralized production.  While the slightly exothermic direct partial oxidation of methane to methanol would be preferable, no such process has been established despite over a century of research.  Generally, this failure has been attributed to the high barriers required to activate methane, as well as the higher activity of the CH bonds in methanol.  However, a precise and general ab initio quantification of the limitations of catalytic direct methane to methanol has yet to be established.  Herein, we derive from first principles a simple model that successfully captures the selectivity-conversion behavior of much of the catalytic methane to methanol experimental literature.  Stemming from this analysis, we suggest several potential strategies for increasing methanol yields.  These include employing  “collectors,” high surface-area materials with strong methanol adsorption potential which can help to lower the partial pressure of methanol in the gas phase, aqueous reaction conditions, and/or diffusion-limited systems.  By successfully rationalizing a significant number of experimental studies from the diverse fields of heterogeneous, homogeneous, biological and gas-phase catalysis within a single model, we underscore the idea that continuous methane to methanol is generally limited, and provide a framework for understanding and evaluating new processes.
-
-If you use this work in your research, please consider citing:
-10.1021/acscatal.8b00220
 
 ## Dependencies: 
 
