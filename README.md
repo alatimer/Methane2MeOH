@@ -5,7 +5,7 @@ the work in publication: https://doi.org/10.1021/acscatal.8b00220.
 
 If you use this work in your research, please consider citing:
 
-Latimer, A. A.; Kakekhani, A.; Kulkarni, A. R.; Nørskov, J. K. Direct Methane to Methanol : The Selectivity − Conversion Limit and Design Strategies. 2018.
+Latimer, A. A.; Kakekhani, A.; Kulkarni, A. R.; Nørskov, J. K. Direct Methane to Methanol : The Selectivity − Conversion Limit and Design Strategies. *ACS Catalysis*. **2018**, 8, 6894–6907.
 
 An interactive version of figure 5 can be found at: https://plot.ly/~alatimer/7
 
